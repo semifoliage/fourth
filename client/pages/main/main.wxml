@@ -1,0 +1,67 @@
+<!--pages/main/main.wxml-->
+
+<view class="container">
+<!--headbar -->
+<view class="userinfo" >
+    <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : '../../materials/flappybird_topic.png'}}"
+            background-size="cover"
+    ></image>
+    <label>{{service.pageTitle}} \t {{nickName}}</label>
+
+    <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : '../../materials/user-unlogin.png'}}"
+            background-size="cover"
+    ></image>
+    <text class="userinfo-data-nickname" wx:if="{{logged}}">{{userInfo.aa}}</text>
+
+</view>
+<!-- info display -->
+<view class="uploader">
+    <view class="mainBoxTwo" >
+        <view class="uploader-text">
+            <picker id='lastHDate' mode="date" value="{{lastHDate}}" start="2018-08-01" end="2020-09-01" bindchange="bindDateChange">
+                <view class="picker">
+                    {{service.lastHDateText}}: {{lastHDate}}
+                </view>
+            </picker>
+        </view>
+        <view class="weight-column" >
+            <label>{{service.lastHWeightText}}</label>
+            <input
+                    id='lastHWeight'
+                    placeholder='{{lastHWeight}} kg'
+                    bindinput="lastWeightKeyInput"
+                    auto-focus
+                    type='number'
+                    style='number'>
+                {{service.lastHWeight}} kg
+            </input>
+        </view>
+        <view class="uploader-text">
+            <picker id='nextHDate' mode="date" value="{{lastHWeight}}" start="2018-08-01" end="2020-09-01" bindchange="bindDateChange" disabled="{{onH=='N' ? false : true}}">
+                <view class="picker">
+                    {{service.nextHDateText}}: {{nextHDate}}
+                </view>
+            </picker>
+        </view>
+        <view class="uploader-text">
+            <label>{{service.nextHstartText}}</label>
+            <text>{{service.nextHstart}}</text>
+        </view>
+    </view>
+</view>
+
+
+<!-- function button -->
+<view class="uploader">
+    <button id="inputData1st" disabled="{{tbd}}" bindtap="inputData1stButton" class="tunnel-text">{{service.inputDataOne}}</button>
+    <button id="inputData2nd" disabled="{{afterHstatus}}" bindtap="inputData2ndButton" class="tunnel-text">{{service.inputDataTwo}}</button>
+    <button bindtap="action2" class="tunnel-text" >{{service.queryData}}</button>
+
+
+</view>
+</view>
+
