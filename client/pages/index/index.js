@@ -3,6 +3,8 @@ const app=getApp()
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
+var page = require('../../utils/pageContent.js')
+var text=page.index.data;
 var userData={};
 
 Page({
@@ -34,7 +36,7 @@ Page({
                  },
                fail: function(err){
                  console.log('storage userInfo can not be reload.  login is needed. ');
-                 util.showModel('New User', 'login is required');
+                 util.showModel('new user', 'login is required');
 
 
                }

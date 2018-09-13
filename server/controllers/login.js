@@ -166,7 +166,7 @@ async function checkUser ( user){
             nickName: user.data.nickName,
             openId: user.data.openid,
             role1: '1',
-            role2; '1',
+            role2: '1',
             lastLogon_date: user.data.loginTime
         };
         delete user.data.session_key;

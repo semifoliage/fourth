@@ -7,6 +7,8 @@ var app = getApp()
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
+var page=require('../../utils/pageContent.js')
+var text=page.main.data;
 
 Page({
 
@@ -77,17 +79,17 @@ Page({
                 service: {
                   pageTitle: '今天 ' + util.formatAll(util.todayDate())+'\t' ,// + day + '/' + monthIndex + '/' + year,
                   lastHDate: result.data[0].LastHDate,
-                  lastHDateText: 'Last H Date: ',
+                  lastHDateText: text.lastHDateText,
                   lastHWeight: result.data[0].lastWeight,
-                  lastHWeightText: 'Last H Weight: ',
+                  lastHWeightText: text.lastHWeightText,
                   nextHDate: result.data[0].NextHDate,
-                  nextHDateText: "Next H Date: ",
-                  nextHstartText: "Next H Start? :",
-                  nextHstart: result.data[0].onH=="Y"? ' START': ' NOT START',
+                  nextHDateText: text.nextHDateText,
+                  nextHstartText: text.nextHstartText,
+                  nextHstart: result.data[0].onH=="Y"? text.start: text.notStart,
                   submit: "submit",
-                  inputDataOne: result.data[0].onH=="Y" ? ' Update 1s record': ' input 1st record',
+                  inputDataOne: result.data[0].onH=="Y" ? text.inputDataOneUpdate: text.inputDataOneNew,
                   beforeHstatus: result.data[0].onH == 'Y' ,
-                  inputDataTwo: "input 2st record",
+                  inputDataTwo: text.inputDataTwo,
                   queryData: "query previous last records",
                   listAllData: "list all old data",
                   onH: result.data[0].onH,
@@ -157,6 +159,12 @@ Page({
       this.setData({
         lastHWeight: e.detail.value
       })
+    },
+    action2: function(e){
+        wx.navigateTo({
+                url: '../inputDataOneShow/inputDataOneShow'//?title=List All Data&weight=' + this.data.service.lastHWeight,
+              })
+
     },
 
 
