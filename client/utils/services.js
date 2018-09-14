@@ -2,7 +2,7 @@
 /*
     this file is to provide the services to client, such as network checking
 */
-
+var utils=require('./util.js')
 
 var networkStatus =()=>{
     wx.request({
@@ -53,5 +53,20 @@ var getStorage =(key)=>{
     return result;
 };
 
+//validate number
+var numberValidate =(num)=>{
+    if (num===''||num==null){      
+      utils.showModel('error', 'please fill number')
+      return false;
+    };
+      if(!isNaN(num)){
+        return true;
+      }else{
+        utils.showModel('error', 'please input number')
+        return false;
+    }
 
-module.exports = { isEmptyObject, userInfoStorage, getStorage};
+};
+
+
+module.exports = { isEmptyObject, userInfoStorage, getStorage, numberValidate};

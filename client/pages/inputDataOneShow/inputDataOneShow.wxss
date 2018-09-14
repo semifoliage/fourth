@@ -10,8 +10,15 @@ page {
 .bc_green {background: green;width:200px; height: 100px;}
 .bc_red {background: red;width:100px; height: 100px;}
 .bc_blue {background: blue;width:100px; height: 100px;}
-.bc_whitesmoke {background: whitesmoke; width:100%; height: auto;}
+.bc_whitesmoke {background: whitesmoke; width:100%; height: auto; margin: 5rpx;}
 .bc_white {background: white; width:100%; height: auto;}
+
+.ontopView{
+  border: 5px solid  rgb(236, 233, 233);
+  color: cadetblue;
+  margin: 5rpx;
+  
+  }
 
 .weight_number {
   font-style: normal;
@@ -40,15 +47,38 @@ page {
   text-align: right;
 }
 .bloodPressureText{
-  width: 33%;
+  width: 100%;
   margin: 5rpx;
-  text-align: center;
+  text-align: left;
   color: rgb(12,64,99);
 }
 .bloodPress{
-  width: 33%;
-  text-align: center;
+  width: 100%;
+  text-align: left;
   color: rgb(12,64,99);
+}
+.bloodBox {
+  width: 33%;
+}
+buttonArea{
+  background-color: blue;
+}
+.button_update{
+  width: 75%;
+  margin-top: 40rpx;
+  border: 4px solid rgb(12,64,99); 
+  color: red;
+
+}
+.button_ok{
+  width: 75%;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border: 4px solid rgb(12,64,99); 
+  
+}
+.clickh{
+  background-color: red ;
 }
 .userinfo {
   display: flex;
@@ -67,16 +97,22 @@ page {
 
 }
 .input-format{
+  width: 40%;
   margin-top: 12rpx;
-  margin-left: 10rpx;
-  margin-right: 10rpx;
-  font-size:70%;
-
-
+  margin-left: 30rpx;
+  margin-right: 0rpx;
+  font-size:100%;
+  text-align: right;
+  border-bottom: 2px solid;
+  background-color:   lightgrey;
+   
 }
 .txt_format{
-  font-size:60%;
+  font-style: normal;
+  font-size:100%;
   color: black;
+  width: 120%;
+  direction: ltr;
 
 }
 .num_format{

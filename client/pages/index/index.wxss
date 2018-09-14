@@ -51,6 +51,11 @@ page {
 
 
  }
+ .other-button-hover{
+   background-color: red;
+   color: gray;
+    
+ }
 
 .dataTodayButton {
 

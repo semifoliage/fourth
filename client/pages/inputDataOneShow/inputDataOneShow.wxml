@@ -1,7 +1,7 @@
 <!--pages/inputDataOneShow/inputDataOneShow.wxml-->
 
 <view style="text-align:center">  {{service.pageTitle}}</view>
-    <view>
+    <view class="ontopView">
         <form class="bc_whitesmoke" style="flex-direction: row">
             <view class="flex-wrp bc_white" style="flex-direction:column">
                 <view class="flex-wrp bc_white font_normal" style="flex-direction:row">
@@ -30,36 +30,37 @@
                                 type='number'
                                 bindinput="dataKeyInput"
                                 auto-focus  >input</input>
-                        <label class="userinfo-avatar weight_numberText">{{service.kg}}</label>
+                        <label class="kg_format weight_numberText">{{service.kg}}</label>
                     </view>
                     
 
-                <view class="flex-wrp bc_whitesmoke" style="flex-direction:row">
-                    <view class="flex-wrp font_normal" style="flex-direction:column">
+                <view class="flex-wrp bc_white" style="flex-direction:row">
+                    <view class="flex-wrp font_normal bloodBox"  style="flex-direction:column">
                         <label class="txt_format bloodPressureText">{{service.bloodHigh}}</label>
                         <label class="txt_format bloodPressure">ddd{{bloodHighNum}}</label>
 
                     </view>
-                    <view class="flex-wrp font_normal" style="flex-direction:column">
+                    <view class="flex-wrp font_normal bloodBox" style="flex-direction:column">
                         <label class="txt_format bloodPressureText">{{service.bloodLow}}</label>
                         <label class="txt_format bloodPressure">eee{{bloodLowNum}}</label>
 
                     </view>
-                    <view class="flex-wrp font_normal" style="flex-direction:column">
+                    <view class="flex-wrp font_normal bloodBox" style="flex-direction:column">
                         <label class="txt_format bloodPressureText">{{service.heartBit}}</label>
                         <label class="txt_format bloodPressure">ddd{{heartBitNum}}</label>
 
                     </view>
                 </view>
+            </view> 
+            <view class="buttonArea">                
+                <button 
+                    id="item-{{id}}" 
+                    plain='true' 
+                    disabled="{{saveStatus}}"
+                    bindtap="inputOneSave" 
+                    class="button_update"  
+                    hover-class="clickh">{{updateButton}}</button>
+                <button plain='ture' disabled="{{nextStatus }}" bindtap="inputOneNext" class="button_ok" >{{okButton}}</button>
             </view>
-
-
-
-
-
-                <icon type="search" size="20" color="rgb(0,255,255)"/>
-                <button id="item-{{id}}" plain='false' disabled="{{saveStatus}}" bindtap="inputOneSave" >{{save}}</button>
-                <button plain='ture' disabled="{{nextStatus }}" bindtap="inputOneNext" >{{next}}</button>
-
     </form>
 </view>

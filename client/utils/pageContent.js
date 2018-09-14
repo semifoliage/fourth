@@ -23,7 +23,9 @@ var inputDataOneShow = {
       heartBit: '心跳',
       heartBitNum:'',
       canIUse: wx.canIUse('button.open-type.getUserInfo'),
-      kg: "(Kg)"
+      kg: "(Kg)",
+      updateButton:'更新数据',
+      okButton: '确定'
 
     }
 };

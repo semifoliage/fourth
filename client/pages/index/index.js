@@ -298,7 +298,8 @@ function setStorage (data){
                 });
     app._userInfo=data;
     app._openId=data.data.openId;
-
+    //set page data
+    setPageData(that, data);
     //show tab
      wx.showTabBar();
 };
