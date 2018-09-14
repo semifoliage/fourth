@@ -192,7 +192,7 @@
    inputTwoSaveNext: function () {
      util.showBusy('Saving...')
      wx.navigateTo({
-                   url: '../index/index' 
+                   url: '../index/index'
                  });
    }
 

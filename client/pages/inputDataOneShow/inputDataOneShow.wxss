@@ -6,23 +6,59 @@ page {
     justify-content: flex-start;
 }
 
-.flex-wrp {display: flex; margin-bottom: 20px; margin-top: 20px}
+.flex-wrp {display: flex; margin-bottom: 0px; margin-top: 5px}
 .bc_green {background: green;width:200px; height: 100px;}
 .bc_red {background: red;width:100px; height: 100px;}
 .bc_blue {background: blue;width:100px; height: 100px;}
-.bc_whitesmoke {background: whitesmoke;width:auto; height: 20%;}
-.bc_white {background: white;width:auto; height: auto;}
+.bc_whitesmoke {background: whitesmoke; width:100%; height: auto;}
+.bc_white {background: white; width:100%; height: auto;}
 
+.weight_number {
+  font-style: normal;
+  margin-left: 5px;
+  color:  rgb(62, 143, 190);
+  text-align: center;
+}
+.font_normal{
+  font-size:  13px;
+}
+.font_large{
+  font-size:  15px;
+}
+
+.weight_numberText{
+  margin-left: 5px;
+  color: rgb(12,64,99);
+  width: 45%;
+  text-align: left;
+
+}
+.kg_format{
+  width: 10%;
+  height: 128rpx;
+  border-radius: 50%;
+  text-align: right;
+}
+.bloodPressureText{
+  width: 33%;
+  margin: 5rpx;
+  text-align: center;
+  color: rgb(12,64,99);
+}
+.bloodPress{
+  width: 33%;
+  text-align: center;
+  color: rgb(12,64,99);
+}
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .userinfo-avatar {
-  width: 128rpx;
+  width: 40%;
   height: 128rpx;
-  margin: 50rpx;
-  border-radius: 50%;
+  border-radius: 50%;ht;
 
 }
 .date_format{

@@ -1,72 +1,65 @@
 <!--pages/inputDataOneShow/inputDataOneShow.wxml-->
 
-<view style="text-align:center">  {{service.pageTitle}}
-<form>
-    <view class="flex-wrp" style="flex-direction:row">
-        <view class="flex-wrp" style="flex-direction:column">
-            <form class="flex-item bc_whitesmoke">
-                <text class="user-motto userinfo-avata"  >{{service.weight_lasttime}}</text>
-                <label class="userinfo-avatar">{{service.weight_lasttimeNum}}</label>
-
-                <view class="flex-wrp bc_white" style="flex-direction:row">
-                    <view class="flex-wrp " style="flex-direction:row">
-                        <label class="txt_format">{{service.beforeWeight}}</label>
-                        <input
-                                id='beforeWeight'
-                                placeholder='{{beforeWeightNum}}'
-                                class='input-format'
-                                bindinput="beforeWeightKeyInput"
-                                auto-focus
-
-                        />
-                    </view>
-                    <view class="flex-wrp" style="flex-direction:row">
-                        <label class="txt_format">{{service.weightToH}}</label>
-                        <text class='num_format'>{{weightToHNum}}</text>
-                    </view>
+<view style="text-align:center">  {{service.pageTitle}}</view>
+    <view>
+        <form class="bc_whitesmoke" style="flex-direction: row">
+            <view class="flex-wrp bc_white" style="flex-direction:column">
+                <view class="flex-wrp bc_white font_normal" style="flex-direction:row">
+                    <label class="userinfo-avatar weight_numberText "  >{{service.weight_lasttime}}</label>
+                    <label class="userinfo-avatar weight_number ">aaa{{service.weight_lasttimeNum}}</label>
+                    <label class="kg_format weight_numberText">{{service.kg}}</label>
                 </view>
-
-                <view class="flex-wrp bc_whitesmoke" style="flex-direction:row">
-                    <view class="flex-wrp " style="flex-direction:column">
-                        <label class="txt_format">{{service.bloodHigh}}</label>
+                <view class="flex-wrp  bc_white font_normal" style="flex-direction:row">
+                        <label class="userinfo-avatar weight_numberText">{{service.beforeWeight}}</label>
+                        <label class="userinfo-avatar weight_number">bbb{{beforeWeightNum}}</label>
+                        <label class="kg_format weight_numberText">{{service.kg}}</label>
+                </view>
+            </view>
+            <view>
+                    <view class="flex-wrp bc_white font_large" style="flex-direction:row">
+                        <label class="userinfo-avatar weight_numberText">{{service.weightToH}}</label>
+                        <label class='userinfo-avatar weight_number'>ccc{{weightToHNum}}</label>
+                        <label class="kg_format weight_numberText">{{service.kg}}</label>
+                    </view>
+                    <view class="flex-wrp bc_white font_large" style="flex-direction:row">
+                        <label class="userinfo-avatar weight_numberText">{{service.weightToHAdjust}}</label>
                         <input
                                 id='bloodHigh'
                                 placeholder='{{bloodHighNum}}'
-                                class='input-format'
+                                class='input-format weight_number'
                                 type='number'
                                 bindinput="dataKeyInput"
                                 auto-focus  >input</input>
+                        <label class="userinfo-avatar weight_numberText">{{service.kg}}</label>
                     </view>
-                    <view class="flex-wrp" style="flex-direction:column">
-                        <label class="txt_format">{{service.bloodLow}}</label>
-                        <input
-                                id='bloodLow'
-                                placeholder='{{bloodLowNum}}'
-                                class='input-format'
-                                type='number'
-                                bindinput="dataKeyInput"
-                                auto-focus>{{weightToHNum}}</input>
+                    
+
+                <view class="flex-wrp bc_whitesmoke" style="flex-direction:row">
+                    <view class="flex-wrp font_normal" style="flex-direction:column">
+                        <label class="txt_format bloodPressureText">{{service.bloodHigh}}</label>
+                        <label class="txt_format bloodPressure">ddd{{bloodHighNum}}</label>
+
                     </view>
-                    <view class="flex-wrp" style="flex-direction:column">
-                        <label class="txt_format">{{service.heartBit}}</label>
-                        <input
-                                id='heartBit'
-                                placeholder='{{heartBitNum}}'
-                                class='input-format'
-                                type='number'
-                                bindinput="dataKeyInput"
-                                auto-focus style='number' >{{service.weightToHNum}}</input>
+                    <view class="flex-wrp font_normal" style="flex-direction:column">
+                        <label class="txt_format bloodPressureText">{{service.bloodLow}}</label>
+                        <label class="txt_format bloodPressure">eee{{bloodLowNum}}</label>
+
+                    </view>
+                    <view class="flex-wrp font_normal" style="flex-direction:column">
+                        <label class="txt_format bloodPressureText">{{service.heartBit}}</label>
+                        <label class="txt_format bloodPressure">ddd{{heartBitNum}}</label>
+
                     </view>
                 </view>
+            </view>
 
-            </form>
 
-        </view>
 
-    </view>
-    <icon type="search" size="20" color="rgb(0,255,255)"/>
-    <button id="item-{{id}}" plain='false' disabled="{{saveStatus}}" bindtap="inputOneSave" >{{save}}</button>
-    <button plain='ture' disabled="{{nextStatus }}" bindtap="inputOneNext" >{{next}}</button>
 
-</form>
+
+                <icon type="search" size="20" color="rgb(0,255,255)"/>
+                <button id="item-{{id}}" plain='false' disabled="{{saveStatus}}" bindtap="inputOneSave" >{{save}}</button>
+                <button plain='ture' disabled="{{nextStatus }}" bindtap="inputOneNext" >{{next}}</button>
+
+    </form>
 </view>

@@ -13,7 +13,8 @@ var inputDataOneShow = {
       weight_lasttimeNum: "",
       beforeWeight: "本次上机体重",
       beforeWeightNum: '',
-      weightToH: "需要透析重量",
+      weightToH: "体重增加",
+      weightToHAdjust: "调整后透析量",
       weightToHNum: "20",
       bloodHigh: '血压高血压',
       bloodHighNum:'',
@@ -21,7 +22,9 @@ var inputDataOneShow = {
       bloodLowNum:'',
       heartBit: '心跳',
       heartBitNum:'',
-      canIUse: wx.canIUse('button.open-type.getUserInfo')
+      canIUse: wx.canIUse('button.open-type.getUserInfo'),
+      kg: "(Kg)"
+
     }
 };
 

@@ -45,6 +45,7 @@ Page({
         beforeWeight: "before Weight (kg)",
         beforeWeightNum: '',
         weightToH: "weight to Hm",
+        weightToHAdjust: "",
         weightToHNum: "20",
         bloodHigh: 'Blood High Press',
         bloodHighNum:'',
@@ -52,7 +53,8 @@ Page({
         bloodLowNum:'',
         heartBit: 'Heart Bit Number',
         heartBitNum:'',
-        canIUse: wx.canIUse('button.open-type.getUserInfo')
+        canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        kg: ""
 
     }
 
@@ -89,6 +91,7 @@ Page({
               beforeWeight: pageText.beforeWeight,
               beforeWeightNum: '',
               weightToH: pageText.weightToH,
+              weightToHAdjust: pageText.weightToHAdjust,
               weightToHNum: "20",
               bloodHigh: pageText.bloodHigh,
               bloodHighNum:'',
@@ -96,8 +99,8 @@ Page({
               bloodLowNum:'',
               heartBit: pageText.heartBit,
               heartBitNum:'',
-              canIUse: wx.canIUse('button.open-type.getUserInfo')
-
+              canIUse: wx.canIUse('button.open-type.getUserInfo'),
+              kg: pageText.kg
             }
          })
 
