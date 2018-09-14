@@ -59,8 +59,8 @@
 <view class="uploader">
     <button id="inputData1st" disabled="{{tbd}}" bindtap="inputData1stButton" class="tunnel-text">{{service.inputDataOne}}</button>
     <button id="inputData2nd" disabled="{{afterHstatus}}" bindtap="inputData2ndButton" class="tunnel-text">{{service.inputDataTwo}}</button>
-    <button bindtap="action2" class="tunnel-text" >{{service.queryData}}</button>
-
+    <button bindtap="queryHistoryData" class="tunnel-text" >{{service.queryData}}</button>
+    <button bindtap="inputDataShow" class="tunnel-text" >{{service.listAllData}}</button>
 
 </view>
 </view>

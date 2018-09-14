@@ -191,11 +191,8 @@
 
    inputTwoSaveNext: function () {
      util.showBusy('Saving...')
-     wx.switchTab({
-                   url: '../main/main',
-                   success(result){
-                     this.onLoad();
-                   }
+     wx.navigateTo({
+                   url: '../index/index' 
                  });
    }
 

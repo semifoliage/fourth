@@ -56,73 +56,55 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="72" />
-          <entry key="json" value="8" />
-          <entry key="log" value="10" />
-          <entry key="wxml" value="17" />
-          <entry key="wxss" value="7" />
+          <entry key="js" value="94" />
+          <entry key="json" value="10" />
+          <entry key="log" value="12" />
+          <entry key="wxml" value="30" />
+          <entry key="wxss" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="8" />
-          <entry key="JavaScript" value="72" />
-          <entry key="PLAIN_TEXT" value="17" />
-          <entry key="XML" value="17" />
+          <entry key="JSON" value="10" />
+          <entry key="JavaScript" value="94" />
+          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="XML" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="6023" />
-          <entry key="json" value="59" />
-          <entry key="wxml" value="59" />
-          <entry key="wxss" value="17" />
+          <entry key="js" value="8389" />
+          <entry key="json" value="101" />
+          <entry key="wxml" value="287" />
+          <entry key="wxss" value="203" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="59" />
-          <entry key="JavaScript" value="6023" />
-          <entry key="PLAIN_TEXT" value="17" />
-          <entry key="XML" value="59" />
+          <entry key="JSON" value="101" />
+          <entry key="JavaScript" value="8389" />
+          <entry key="PLAIN_TEXT" value="203" />
+          <entry key="XML" value="287" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/main/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/main/main.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/utils/pageContent.js">
+        <entry file="file://$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+            <state relative-caret-position="1622">
+              <caret line="194" column="41" selection-start-line="194" selection-start-column="41" selection-end-line="194" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/index/index.js">
+        <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="442">
+              <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="3" selection-end-line="209" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -133,6 +115,9 @@
     <findStrings>
       <find>getWxLoginResult</find>
       <find>userData</find>
+      <find>cover</find>
+      <find>options</find>
+      <find>loginIcon</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,20 +132,15 @@
         <option value="$PROJECT_DIR$/client/vendor/wafer2-client-sdk/index.js" />
         <option value="$PROJECT_DIR$/client/config.js" />
         <option value="$PROJECT_DIR$/server/controllers/user.js" />
-        <option value="$PROJECT_DIR$/client/pages/index/index.wxss" />
         <option value="$PROJECT_DIR$/client/pages/main/main.wxss" />
         <option value="$PROJECT_DIR$/client/app.js" />
         <option value="$PROJECT_DIR$/client/vendor/wafer2-client-sdk/lib/login.js" />
-        <option value="$PROJECT_DIR$/client/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxss" />
-        <option value="$PROJECT_DIR$/client/utils/services.js" />
         <option value="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml" />
         <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxml" />
         <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxss" />
         <option value="$PROJECT_DIR$/client/pages/queryList/queryList.wxml" />
         <option value="$PROJECT_DIR$/client/pages/queryList/queryList.wxss" />
-        <option value="$PROJECT_DIR$/client/pages/queryList/queryList.js" />
-        <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js" />
         <option value="$PROJECT_DIR$/client/utils/util.js" />
         <option value="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js" />
         <option value="$PROJECT_DIR$/server/controllers/allRecordsSv.js" />
@@ -168,14 +148,19 @@
         <option value="$PROJECT_DIR$/server/controllers/userSv.js" />
         <option value="$PROJECT_DIR$/server/controllers/inputBeforeHSv.js" />
         <option value="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxss" />
-        <option value="$PROJECT_DIR$/client/app.json" />
-        <option value="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml" />
         <option value="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.js" />
         <option value="$PROJECT_DIR$/server/controllers/login.js" />
-        <option value="$PROJECT_DIR$/client/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/client/pages/main/main.wxml" />
+        <option value="$PROJECT_DIR$/client/utils/services.js" />
+        <option value="$PROJECT_DIR$/client/pages/queryList/queryList.js" />
         <option value="$PROJECT_DIR$/client/pages/main/main.js" />
+        <option value="$PROJECT_DIR$/client/pages/main/main.wxml" />
+        <option value="$PROJECT_DIR$/client/app.json" />
+        <option value="$PROJECT_DIR$/client/pages/index/index.js" />
         <option value="$PROJECT_DIR$/client/utils/pageContent.js" />
+        <option value="$PROJECT_DIR$/client/pages/index/index.wxss" />
+        <option value="$PROJECT_DIR$/client/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js" />
       </list>
     </option>
   </component>
@@ -221,7 +206,35 @@
               <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="inputDataOne" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="inputDataOneShow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="inputDataTwo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="queryList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
@@ -255,8 +268,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536807632018" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/logFiles/node-log-2018-09-13_01.log" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536905693615" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/logFiles/node-log-2018-09-14.log" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -345,33 +358,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/helper/mysqldb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/middlewares/response.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-12.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-12_1.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/helper/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="85" column="85" selection-start-line="85" selection-start-column="76" selection-end-line="85" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-12_7.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -396,31 +382,10 @@
     <entry file="file://$PROJECT_DIR$/server/app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/index/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/main/main.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/index/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="149" selection-start-line="22" selection-start-column="149" selection-end-line="22" selection-end-column="149" />
         </state>
       </provider>
     </entry>
@@ -457,27 +422,6 @@
     <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="336" column="40" selection-start-line="336" selection-start-column="40" selection-end-line="336" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/utils/util.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
@@ -499,13 +443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/userSv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/inputBeforeHSv.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="670">
@@ -517,13 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
           <caret line="92" column="62" lean-forward="true" selection-start-line="92" selection-start-column="59" selection-end-line="92" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -540,27 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2941">
-          <caret line="173" column="24" lean-forward="true" selection-start-line="173" selection-start-column="24" selection-end-line="173" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" selection-end-line="60" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -568,45 +477,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/utils/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="2" lean-forward="true" selection-start-line="6" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="93" column="59" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="93" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -634,31 +508,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/index/index.js">
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-13_prod_01.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/queryDetail/queryDetail.wxss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="946">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/main/main.wxml">
+    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        <state relative-caret-position="646">
+          <caret line="336" column="40" selection-start-line="336" selection-start-column="40" selection-end-line="336" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/queryDetail/queryDetail.wxml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/utils/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app.wxss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
+          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/userSv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1078">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/main/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+        <state relative-caret-position="476">
+          <caret line="94" column="29" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/main/main.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="62" column="78" selection-start-line="62" selection-start-column="78" selection-end-line="62" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/index/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/utils/pageContent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        <state relative-caret-position="194">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-482">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="3" selection-end-line="209" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-14.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1622">
+          <caret line="194" column="41" selection-start-line="194" selection-start-column="41" selection-end-line="194" selection-end-column="41" />
         </state>
       </provider>
     </entry>

@@ -28,6 +28,7 @@ var inputDataOneShow = {
 var index = {
     data: {
       newuserWorning: '',
+      bingLiBen: "综合症"
     }
 };
 
@@ -43,7 +44,7 @@ var main= {
           inputDataOneNew: '输入上机数据',
           inputDataTwoUpdate: '更新上机数据',
           inputDataTwo: "输入上机数据",
-          queryData: "query previous last records",
+          queryData: "查询透析历史数据",
           listAllData: "list all old data"
         }
 };

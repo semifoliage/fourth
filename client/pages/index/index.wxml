@@ -2,15 +2,7 @@
 <view >
     <!-- 用户登录测试 -->
 
-    <view class="loginIcon">
-        <image
-                class="loginIconImage"
-                src="../../materials/th.png"
-                background-size="cover" >
 
-        </image>
-
-    </view>
     <view class="userinfo" >
         <image
                 class="userinfo-avatar"
@@ -22,10 +14,11 @@
             <text class="userinfo-nickname">{{ }}</text>
             <button class="userinfo-nickname" wx:if="{{!logged}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{logged ? userInfo.data.nickName : '点击微信登录'}}</button>
             <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-            <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+            <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.nickName}}</text>
 
 
         </view>
+
     </view>
 
 
@@ -35,7 +28,7 @@
             <text class="dataTodayButton">Welcome : <text>{{logged ?   userInfo.nickName :'' }}</text> </text>
 
         </navigator>
-        <text class="dataTodayButton ">{{dateToday}}</text>
+        <text class="uploader-text ">我的病例本</text>
 
 
 
@@ -43,6 +36,23 @@
                 url="../main/main?title=queryUser&user={{userInfo.nickName}}"
                 open-type="navigate"
                 hover-class="navigator-hover"></navigator>
+    </view>
+    <view class="loginIcon">
+        <view class="bingLiBen">
+            <image
+                    id="image"
+                    class="loginIconImage"
+                    src="../../materials/th.png"
+                    bindtap="previewImg"
+                    background-size="cover"
+                    hidden="{{mainIconShow}}"
+                    mode="scaleToFill">
+
+            </image>
+        </view>
+        <view class="bingLiBenText">
+            <text class="loginIconText" bindtap="previewImg">{{list}}</text>
+        </view>
     </view>
 
 </view>

@@ -13,12 +13,14 @@ Page({
         openId:'',
         logged: false,
         takeSession: false,
-        requestResult: ''
+        requestResult: '',
+        mainIconShow: true,
+        list: text.bingLiBen
     },
     onLoad: function(options){
         wx.hideTabBar();
         var that =this;
-
+        //
         //get stored info
         wx.getStorage({
               key: 'userRecords',
@@ -32,6 +34,11 @@ Page({
                 app._userInfo=res.data;
                 app.openId=res.data.data.openId;
                 console.log('storage get done, the user info collected')
+
+                //set MainIcon show
+                setPageData(that, res)
+
+                //show tabbar
                 wx.showTabBar();
                  },
                fail: function(err){
@@ -185,11 +192,15 @@ Page({
     },
 
     // 预览图片
-    previewImg: function () {
-        wx.previewImage({
-            current: this.data.imgUrl,
-            urls: [this.data.imgUrl]
-        })
+    previewImg: function (e) {
+        console.log('navigate to mainpage')
+        var string='&openId='+this.data.openId
+                    +'&nickName='+ this.data.userInfo.nickName
+                    +'&userInfo='+ JSON.stringify(this.data.userInfo)
+                    +'&codeName='+this.data.userInfo.data.codeName;
+        wx.navigateTo({
+                  url: '../main/main?title=Main Page'+string,
+              })
     },
 
     // 切换信道的按钮
@@ -290,4 +301,24 @@ function setStorage (data){
 
     //show tab
      wx.showTabBar();
+};
+
+function setPageData(that, data){
+      /*
+        data format is defined:
+        data {
+            code: _code,
+            data: {
+                openId: _openId,
+                nickName: _nickName
+            }
+        }
+      */
+    that.setData({
+                //openId: data.data.openId,
+                //userInfo: data,
+                logged: true,
+                mainIconShow: false
+                });
+
 }

@@ -23,6 +23,7 @@
      },
 
     onLoad: function (options) {
+        console.log(options)
        this.setData({
              logged: true,
              nickName: app._nickName,
@@ -34,7 +35,7 @@
        var that = this;
              wx.request({
                url: `${config.service.queryAllDataUrl}`,
-               data: {openId:that.data.openId},
+               data: {openId:options.openId},
                success: function (res) {
                  var records = res.data;
                  console.log('信息' +records.length);

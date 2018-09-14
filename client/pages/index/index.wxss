@@ -8,22 +8,49 @@ page {
 
 .loginIcon {
     width: 700rpx;
-    height: 600rpx;
+    height: 300rpx;
     margin-top: 0rpx;
     margin-bottom: 0rpx;
-
-
+    border: 10px black;
+    font-size: 40rpx;
+    display: flex;
+}
+.bingLiBen{
+    flex-direction: column;
+    width: 200rpx;
+    height: 200rpx;
+    margin-top: 0rpx;
+    margin-bottom: 0rpx;
 }
 
 .loginIconImage {
     width: 100%;
     height: 100%;
     margin-left: 25rpx;
-
-    margin-top: 0rpx;
+    margin-top: 0rpx;     
+    border: mediumaquamarine double green;
+    border-color: #007AFF solid;
+    border-style: ridge;
+    border-width:2px;
 
 
 }
+.bingLiBenText{
+    width: 400rpx;
+    height: 200rpx;
+    margin-top: 80rpx;
+    margin-left: 40rpx;
+    margin-bottom: 0rpx;
+}
+.loginIconText {
+     width: 100%;
+     height: 100%;
+     margin-left: 300rpx;
+
+     margin-top: 0rpx;
+
+
+ }
 
 .dataTodayButton {
 

@@ -7,6 +7,7 @@ var app = getApp()
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
+var services=require('../../utils/services.js')
 var page=require('../../utils/pageContent.js')
 var text=page.main.data;
 
@@ -49,19 +50,19 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onShow: function (options) {
+  onLoad: function (e) {
     this.setData({
           logged: true,
-          userInfo: app._userInfo,
-          openId: app._userInfo.data.openId
+          userInfo: JSON.parse(e.userInfo),
+          openId: e.openId
         });
-     console.log('query the H initial data')
+     console.log('query the H initial data in Main Page')
      var that =this;
     //query inital H info
     wx.request({
           url:   `${config.service.userHInfoUrl}`,
           login: false,
-          data: {user:this.data.openId},
+          data: {user:e.openId},
           success(result) {
             util.showSuccess('请求成功完成')
             console.log('user initial H data collected ')
@@ -90,7 +91,7 @@ Page({
                   inputDataOne: result.data[0].onH=="Y" ? text.inputDataOneUpdate: text.inputDataOneNew,
                   beforeHstatus: result.data[0].onH == 'Y' ,
                   inputDataTwo: text.inputDataTwo,
-                  queryData: "query previous last records",
+                  queryData: text.queryData,
                   listAllData: "list all old data",
                   onH: result.data[0].onH,
 
@@ -107,6 +108,8 @@ Page({
         });
 
   },
+
+  //start input the data ,
   inputData1stButton: function(){
       //console.log('st:' + weight_todelete);
       /*this.setData({
@@ -124,6 +127,7 @@ Page({
       })
     },
 
+    //if the first data is entered , go to next phase
     inputData2ndButton: function () {
       //console.log('st:' + weight_todelete);
       wx.navigateTo({
@@ -131,16 +135,29 @@ Page({
       })
     },
 
+    //query the history data
+    queryHistoryData: function(e){
+        var string='?title=Query History Data'
+                      +'&nickName='+this.data.nickName
+                      +'&openId='+this.data.openId
+        wx.navigateTo({
+          url: '../queryList/queryList'+string//?title=Input Data One&weight=' + this.data.lastHWeight + '&nextHDate=' + this.data.nextHDate +'&nickName='+this.data.nickName+'&openId='+this.data.openId,
+        })
+    },
+    //userless
     queryListButton: function(options){
       wx.navigateTo({
         url: '../queryList/queryList?title=List All Data&weight=' + this.data.service.lastHWeight,
       })
     },
+    //userless
     chessAction : function(options){
       wx.navigateTo({
           url: '../chess/chess'
       })
     },
+
+    //handle date picker is changed
     bindDateChange: function(e){
       console.log('picker发送选择改变，携带值为', e.detail.value);
       console.log(e);
@@ -155,12 +172,16 @@ Page({
         });
       }
     },
+
+    //handle the lastWeight is changed
     lastWeightKeyInput: function(e){
       this.setData({
         lastHWeight: e.detail.value
       })
     },
-    action2: function(e){
+
+    //show the data all in summary page
+    inputDataShow: function(e){
         wx.navigateTo({
                 url: '../inputDataOneShow/inputDataOneShow'//?title=List All Data&weight=' + this.data.service.lastHWeight,
               })
@@ -180,9 +201,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onLoad: function () {
 
-  },
 
   /**
    * 生命周期函数--监听页面隐藏
@@ -219,3 +238,39 @@ Page({
 
   }
 })
+
+function setPageData(opetions, that){
+    return new Promise ((resolve, reject)=>{
+        console.log(options);
+        that.setData({
+          logged: true,
+          userInfo: JSON.parse(options.userInfo),
+          openId: options.openId
+        })
+        resolve ('data set')
+    })
+
+};
+
+function queryUserInitialData(data, sql){
+    return new Promise((resolve, reject)=>{
+         wx.request({
+          url:   `${config.service.userHInfoUrl}`,
+          login: false,
+          data: {user:this.data.openId},
+          success(result) {
+            util.showSuccess('请求成功完成')
+            console.log('user initial H data collected ')
+            console.log(result)
+            resolve (result);
+          },
+          fail(error) {
+            util.showModel('请求失败', error);
+            console.log('request fail', error);
+          }
+        });
+
+    })
+
+
+}

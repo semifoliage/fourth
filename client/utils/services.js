@@ -37,5 +37,21 @@ var userInfoStorage=(obj)=>{
                   });
 };
 
+var getStorage =(key)=>{
+    var result={};
+    wx.getStorage({
+          key: 'userRecords',
+          success: function (res) {
+            console.log('get the storage data from subfunction in service');
+            result=res;
+             },
+           fail: function(err){
+             console.log('storage inf can not be reload from subfunction in service. ');
+             util.showModel('xxxx', 'xxxxxx');
+           }
+          });
+    return result;
+};
 
-module.exports = { isEmptyObject, userInfoStorage};
+
+module.exports = { isEmptyObject, userInfoStorage, getStorage};
