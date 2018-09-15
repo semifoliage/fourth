@@ -185,7 +185,7 @@
 
      util.showBusy('Backto Main Page ...')
      wx.switchTab({
-                   url: '../main/main',
+                   url: '../index/index',
                  });
    },
 
