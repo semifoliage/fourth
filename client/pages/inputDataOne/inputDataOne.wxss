@@ -6,13 +6,29 @@ page {
     justify-content: flex-start;
 }
 
-.flex-wrp {display: flex; margin-bottom: 20px; margin-top: 20px}
+.flex-wrp {display: flex; margin-bottom: 20px; margin-top: 10px ;}
 .bc_green {background: green;width:200px; height: 100px;}
 .bc_red {background: red;width:100px; height: 100px;}
 .bc_blue {background: blue;width:100px; height: 100px;}
-.bc_whitesmoke {background: whitesmoke;width:auto; height: 20%;}
+.bc_whitesmoke {background: whitesmoke;width:auto; }
 .bc_white {background: white;width:auto; height: auto;}
 
+.saveButton{
+  width: 38%;
+  font-size: 14px;
+  margin-left: 30px;
+  
+}
+.summaryButton{
+width: 38%;
+font-size: 14px;
+margin-right:40px;
+
+}
+.nextButton{
+  width:80%;
+  font-size: 14px;
+}
 .userinfo {
   display: flex;
   flex-direction: column;

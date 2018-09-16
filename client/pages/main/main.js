@@ -78,7 +78,7 @@ Page({
                 beforeHstatus: result.data[0].onH=='N'? false: true ,
                 afterHstatus : result.data[0].onH=='N'? true: false ,
                 service: {
-                  pageTitle: '今天 ' + util.formatAll(util.todayDate())+'\t' ,// + day + '/' + monthIndex + '/' + year,
+                  pageTitle: '上机日期 ' + util.formatAll(util.todayDate())+'s' ,// + day + '/' + monthIndex + '/' + year,
                   lastHDate: result.data[0].LastHDate,
                   lastHDateText: text.lastHDateText,
                   lastHWeight: result.data[0].lastWeight,
@@ -175,12 +175,16 @@ Page({
 
     //handle the lastWeight is changed
     lastWeightKeyInput: function(e){
+      //console.log(e)
+      if(!services.numberValidate(e.detail.value)&& e.detail.cursor==0){
+        return
+      }
       this.setData({
         lastHWeight: e.detail.value
       })
     },
 
-    //show the data all in summary page
+    //show the data all in summary page    not used
     inputDataShow: function(e){
         wx.navigateTo({
                 url: '../inputDataOneShow/inputDataOneShow'//?title=List All Data&weight=' + this.data.service.lastHWeight,

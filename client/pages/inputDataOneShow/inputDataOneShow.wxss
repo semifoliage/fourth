@@ -10,8 +10,8 @@ page {
 .bc_green {background: green;width:200px; height: 100px;}
 .bc_red {background: red;width:100px; height: 100px;}
 .bc_blue {background: blue;width:100px; height: 100px;}
-.bc_whitesmoke {background: whitesmoke; width:100%; height: auto; margin: 5rpx;}
-.bc_white {background: white; width:100%; height: auto;}
+.bc_whitesmoke {background: whitesmoke; width:100%; height: auto; margin: 0rpx;}
+.bc_white {background: white; width:100%; height: 100px; }
 
 .ontopView{
   border: 5px solid  rgb(236, 233, 233);
@@ -88,7 +88,7 @@ buttonArea{
 .userinfo-avatar {
   width: 40%;
   height: 128rpx;
-  border-radius: 50%;ht;
+  border-radius: 50%;
 
 }
 .date_format{

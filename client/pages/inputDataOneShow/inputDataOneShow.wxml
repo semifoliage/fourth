@@ -6,48 +6,54 @@
             <view class="flex-wrp bc_white" style="flex-direction:column">
                 <view class="flex-wrp bc_white font_normal" style="flex-direction:row">
                     <label class="userinfo-avatar weight_numberText "  >{{service.weight_lasttime}}</label>
-                    <label class="userinfo-avatar weight_number ">aaa{{service.weight_lasttimeNum}}</label>
+                    <label class="userinfo-avatar weight_number ">{{weight_lasttimeNum}}</label>
                     <label class="kg_format weight_numberText">{{service.kg}}</label>
                 </view>
                 <view class="flex-wrp  bc_white font_normal" style="flex-direction:row">
                         <label class="userinfo-avatar weight_numberText">{{service.beforeWeight}}</label>
-                        <label class="userinfo-avatar weight_number">bbb{{beforeWeightNum}}</label>
+                        <label class="userinfo-avatar weight_number">{{beforeWeightNum}}</label>
+                        <label class="kg_format weight_numberText">{{service.kg}}</label>
+                </view>
+                <view class="flex-wrp  bc_whitesmoke font_normal" style="flex-direction:row">
+                        <label class="userinfo-avatar weight_numberText">{{service.analyzeWeight}}</label>
+                        <label class="userinfo-avatar weight_number">{{analyzeWeightNum}}</label>
                         <label class="kg_format weight_numberText">{{service.kg}}</label>
                 </view>
             </view>
-            <view>
+            <view class="flex-wrp bc_white" style="flex-direction:column">
                     <view class="flex-wrp bc_white font_large" style="flex-direction:row">
                         <label class="userinfo-avatar weight_numberText">{{service.weightToH}}</label>
-                        <label class='userinfo-avatar weight_number'>ccc{{weightToHNum}}</label>
+                        <label class='userinfo-avatar weight_number'>{{weightToHNum}}</label>
                         <label class="kg_format weight_numberText">{{service.kg}}</label>
                     </view>
                     <view class="flex-wrp bc_white font_large" style="flex-direction:row">
                         <label class="userinfo-avatar weight_numberText">{{service.weightToHAdjust}}</label>
                         <input
                                 id='bloodHigh'
-                                placeholder='{{bloodHighNum}}'
+                                placeholder='{{weightToHAdjustNum}}'
                                 class='input-format weight_number'
                                 type='number'
-                                bindinput="dataKeyInput"
+                                bindinput="adjustInput"
                                 auto-focus  >input</input>
                         <label class="kg_format weight_numberText">{{service.kg}}</label>
                     </view>
                     
-
+            </view>
+            <view>
                 <view class="flex-wrp bc_white" style="flex-direction:row">
                     <view class="flex-wrp font_normal bloodBox"  style="flex-direction:column">
                         <label class="txt_format bloodPressureText">{{service.bloodHigh}}</label>
-                        <label class="txt_format bloodPressure">ddd{{bloodHighNum}}</label>
+                        <label class="txt_format bloodPressure">{{bloodHighNum}}</label>
 
                     </view>
                     <view class="flex-wrp font_normal bloodBox" style="flex-direction:column">
                         <label class="txt_format bloodPressureText">{{service.bloodLow}}</label>
-                        <label class="txt_format bloodPressure">eee{{bloodLowNum}}</label>
+                        <label class="txt_format bloodPressure">{{bloodLowNum}}</label>
 
                     </view>
                     <view class="flex-wrp font_normal bloodBox" style="flex-direction:column">
                         <label class="txt_format bloodPressureText">{{service.heartBit}}</label>
-                        <label class="txt_format bloodPressure">ddd{{heartBitNum}}</label>
+                        <label class="txt_format bloodPressure">{{heartBitNum}}</label>
 
                     </view>
                 </view>
@@ -60,7 +66,8 @@
                     bindtap="inputOneSave" 
                     class="button_update"  
                     hover-class="clickh">{{updateButton}}</button>
-                <button plain='ture' disabled="{{nextStatus }}" bindtap="inputOneNext" class="button_ok" >{{okButton}}</button>
+                <button plain='ture' disabled="{{nextStatus }}" bindtap="backToInputOne" class="button_ok" >{{okButton}}</button>
+                <button plain='ture' disabled="{{ssssnextStatus }}" bindtap="goToInputTwo" class="button_ok" >{{nextButton}}</button>
             </view>
     </form>
 </view>

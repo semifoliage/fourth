@@ -15,7 +15,7 @@
             src="{{logged ? userInfo.avatarUrl : '../../materials/user-unlogin.png'}}"
             background-size="cover"
     ></image>
-    <text class="userinfo-data-nickname" wx:if="{{logged}}">{{userInfo.aa}}</text>
+    <text class="userinfo-data-nickname" wx:if="{{logged}}">{{ }}</text>
 
 </view>
 <!-- info display -->
@@ -58,9 +58,8 @@
 <!-- function button -->
 <view class="uploader">
     <button id="inputData1st" disabled="{{tbd}}" bindtap="inputData1stButton" class="tunnel-text">{{service.inputDataOne}}</button>
-    <button id="inputData2nd" disabled="{{afterHstatus}}" bindtap="inputData2ndButton" class="tunnel-text">{{service.inputDataTwo}}</button>
+    <button id="inputData2nd" disabled="disabled" bindtap="inputData2ndButton" class="tunnel-text">{{service.inputDataTwo}}</button>
     <button bindtap="queryHistoryData" class="tunnel-text" >{{service.queryData}}</button>
-    <button bindtap="inputDataShow" class="tunnel-text" >{{service.listAllData}}</button>
 
 </view>
 </view>

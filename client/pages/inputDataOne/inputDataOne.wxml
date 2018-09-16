@@ -65,9 +65,14 @@
         </view>
 
     </view>
-    <icon type="search" size="20" color="rgb(0,255,255)"/>
-    <button id="item-{{id}}" plain='false' disabled="{{saveStatus}}" bindtap="inputOneSave" >{{save}}</button>
-    <button plain='ture' disabled="{{nextStatus }}" bindtap="inputOneNext" >{{next}}</button>
+    <view class="flex-wrp" style="flex-direction:column">
+        <view class="flex-wrp" style="flex-direction:row">
+    <button id="item-{{id}}" plain='false' disabled="{{saveStatus}}" bindtap="inputOneSave" class='saveButton'>{{save}}</button>
+    <button id="item-{{id}}" plain='false' disabled="{{!saveStatus}}" bindtap="inputOneSummary" class='summaryButton'>{{summary}}</button>
+    </view>
+
+    <button plain='false' disabled="{{!saveStatus}}" bindtap="inputOneNext" class='nextButton'>{{next}}</button>
+    </view>
 
 </form>
 </view>

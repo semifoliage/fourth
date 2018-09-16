@@ -59,7 +59,7 @@ Page({
 
         //package userinfo 
         userData = e.detail;
-        
+        var that=this;
         const session = qcloud.Session.get()
 
         if (session) {
@@ -83,7 +83,7 @@ Page({
                         openId: userAllInfo.data.openId,
                         logged: true })
                     util.showSuccess('登录成功')
-                    setStorage(userAllInfo);
+                    setStorage(userAllInfo, that);
                 },
                 fail: err => {
                     console.error(err)
@@ -100,7 +100,7 @@ Page({
                     data.openId= data.openid;
                     var result= {data}
                     var userAllInfo=Object.assign({}, e.detail.userInfo, result)
-                    setStorage(userAllInfo)
+                    setStorage(userAllInfo, that)
 
                     console.log('login success and set page data ')
                     this.setData({
@@ -285,7 +285,7 @@ Page({
     }
 });
 
-function setStorage (data){
+function setStorage (data, that){
     console.log('setStorage data')
     console.log(data)
     wx.setStorage({

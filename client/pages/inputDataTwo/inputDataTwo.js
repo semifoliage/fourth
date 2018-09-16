@@ -3,6 +3,8 @@
  var qcloud = require('../../vendor/wafer2-client-sdk/index');
  var config = require('../../config');
  var util = require('../../utils/util.js');
+ var page=require('../../utils/pageContent.js')
+ var pageText=page.inputDataTwo.data
  var beforeHData={};
 
 
@@ -76,19 +78,19 @@
        overHWarning:'',
        service: {
          pageTitle: 'Today is ' + util.formatAll(new Date()),
-         weight_toH: 'Weight to H',
-         afterWeight: 'New Weight After H',
-         weightH:'Weight H',
-         OverH:'Over H number',
-         bloodHighPressureAfter: 'High Blood Pressure',
-         bloodLowPressureAfter: 'Low Blood Pressure',
-         heartBitAfter: 'Heart Bit Rate',
+         weight_toH: pageText.weight_toH,
+         afterWeight: pageText.afterWeight,
+         weightH:pageText.weightH,
+         OverH:pageText.overH,
+         bloodHighPressureAfter: pageText.bloodHighPressureAfter,
+         bloodLowPressureAfter: pageText.bloodLowPressureAfter,
+         heartBitAfter: pageText.heartBitAfter,
          hDuration: 'duration of H',
          hasUserInfo: false,
          userAccount: 'lala',
          inputValue: '',
          saveNext: "Save and Next",
-         save: "Save Data",
+         save: pageText.save,
          canIUse: wx.canIUse('button.open-type.getUserInfo')
 
        },

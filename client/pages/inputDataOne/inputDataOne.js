@@ -5,6 +5,8 @@ var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
 var services= require('../../utils/services')
+var page=require('../../utils/pageContent.js')
+var pageText=page.inputDataOne.data;
 
 
 Page({
@@ -28,6 +30,7 @@ Page({
     nextStatus: false,
     save: "Next",
     saveStatus: true,
+    summary:'',
     service: {
       pageTitle: 'Hello World really?',
       systemDate: '',
@@ -52,7 +55,7 @@ Page({
 
   onLoad: function (options) {
     //check the existing records
-    console.log(options);
+    //console.log(options);
     var that =this;
     wx.request({
           url: `${config.service.host}/weapp/input` +'?openId='+options.openId +'&nextHDate='+options.nextHDate,
@@ -71,8 +74,10 @@ Page({
                 param.highPressureBefore='';
                 param.lowPressureBefore='';
                 param.heartBeatRateB='';
+                param.saveStatus=false;
             }else {
                 param=result.data[0];
+                param.saveStatus=true;
                 console.log(param);
             };
 
@@ -88,25 +93,26 @@ Page({
               bloodHighNum: param.highPressureBefore,
               bloodLowNum: param.lowPressureBefore,
               heartBitNum: param.heartBeatRateB,
-              next: "Next",
-              nextStatus: options.oH == 'N' ? false: true,
-              save: options.oH == 'N' ? "Save Data" :"Update Data" ,
-              saveStatus: options.oH == 'N' ? true : false,
+              next: pageText.next,
+              nextStatus: options.oH == 'N' ? true: false,
+              save: options.oH == 'N' ? pageText.saveNew :pageText.saveUpdate ,
+              saveStatus: options.oH == 'N' ? false : true,
+              summary: pageText.summary,
               service: {
                 pageTitle: 'Today : ' + options.nextHDate,//util.formatAll(util.todayDate()),
                 systemDate: util.formatAll(util.todayDate()),
                 userAccount: 'lala',
                 inputValue: '',
-                weight_lasttime: "Weight of last time",
+                weight_lasttime: pageText.weight_lasttime,
                 weight_lasttimeNum: options.weight,
-                beforeWeight: "before Weight (kg)",
-                weightToH: "weight to Hm",
+                beforeWeight: pageText.beforeWeight,
+                weightToH: pageText.weightToH,
                 weightToHNum: "20",
-                bloodHigh: 'Blood High Press',
+                bloodHigh: pageText.bloodHigh,
                 bloodHighNum: '140',
-                bloodLow: 'Blood Low Press',
+                bloodLow: pageText.bloodLow,
                 bloodLowNum: '90',
-                heartBit: 'Heart Bit Number',
+                heartBit: pageText.heartBit,
                 heartBitNum: '70',
                 canIUse: wx.canIUse('button.open-type.getUserInfo')
                         }
@@ -124,6 +130,10 @@ Page({
 
   //calculate the weight to h
   beforeWeightKeyInput: function (option) {
+    //number validate
+    if(!services.numberValidate(option.detail.value)&& option.detail.cursor==0){
+            return
+          }
     var newWeight = option.detail.value;
     var cleanWeight = newWeight - this.data.service.weight_lasttimeNum;
     this.setData({
@@ -175,6 +185,10 @@ Page({
   },
 
   dataKeyInput: function(e){
+    //number validate
+     if(!services.numberValidate(e.detail.value)&& e.detail.cursor==0){
+                return
+              }
     switch(e.target.id)
         {
             case 'bloodHigh':
@@ -193,6 +207,24 @@ Page({
               });
               break;
         }
+  },
+
+  //inputOneSummary
+  inputOneSummary: function () {
+     var string= '&weightToH='+this.data.weightToHNum
+                    +'&hDate='+this.data.hDate
+                    +'&nickName='+this.data.nickName
+                    +'&openId='+this.data.openId
+                    +'&weightBeforeH='+this.data.beforeWeightNum
+                    +'&lastWeight='+ this.data.weight_lasttimeNum
+                    +'&highPressureBefore=' +this.data.bloodHighNum
+                    +'&lowPressureBefore='+ this.data.bloodLowNum
+                    +'&heartBeatRateB='+ this.data.heartBitNum
+                    +'&hospitalName='+ '';
+    wx.navigateTo({
+          url: '../inputDataOneShow/inputDataOneShow?title=Input Data Two'+string,
+        });
+
   },
 
   inputOneNext: function(){

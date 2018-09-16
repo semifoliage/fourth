@@ -27,6 +27,8 @@ Page({
     hDate:'',
     weight_lasttimeNum: '',
     weightToHNum: '',
+    weightToHAdjustNum:'',
+    analyzeWeight:'',
     beforeWeightNum: '',
     bloodHighNum:'',
     bloodLowNum:'',
@@ -35,6 +37,7 @@ Page({
     okButtonStatus: false,
     updateButton: "Next",
     updateButtonStatus: true,
+    nextButton:'',
     service: {
         pageTitle: 'Hello World really?',
         systemDate: '',
@@ -44,6 +47,7 @@ Page({
         weight_lasttimeNum: "",
         beforeWeight: "before Weight (kg)",
         beforeWeightNum: '',
+        analyzeWeightNum: '',
         weightToH: "weight to Hm",
         weightToHAdjust: "",
         weightToHNum: "20",
@@ -65,14 +69,17 @@ Page({
    */
   onLoad: function (options) {
     var that =this;
+    console.log(options)
     //console.log(pageText.pageTitle}
     this.setData({
         title: options.title,
         nickName:options.nickName,
         openId:options.openId,
-        hDate: options.dateToH,
+        hDate: options.hDate,
         weight_lasttimeNum: options.lastWeight,
+        analyzeWeightNum: options.weightBeforeH-options.weightToH,
         weightToHNum: options.weightToH,
+        weightToHAdjustNum: options.weightToH,
         beforeWeightNum: options.weightBeforeH,
         bloodHighNum: options.highPressureBefore,
         bloodLowNum: options.lowPressureBefore,
@@ -81,6 +88,7 @@ Page({
         okButtonStatus: options.oH == 'N' ? false: true,
         updateButton: pageText.updateButton,
         saveStatus: options.oH == 'N' ? true : false,
+        nextButton: pageText.nextButton,
         service: {
               pageTitle: pageText.pageTitle,
               systemDate: '',
@@ -90,6 +98,7 @@ Page({
               weight_lasttimeNum: "",
               beforeWeight: pageText.beforeWeight,
               beforeWeightNum: '',
+              analyzeWeight: pageText.analyzeWeight,
               weightToH: pageText.weightToH,
               weightToHAdjust: pageText.weightToHAdjust,
               weightToHNum: "20",
@@ -106,6 +115,45 @@ Page({
 
 
 
+  },
+  adjustInput: function(e){
+     //number validate
+     if(!services.numberValidate(e.detail.value)&& e.detail.cursor==0){
+                return
+              }
+    //console.log(e);
+    this.setData({
+        weightToHAdjustNum: e.detail.value
+    })
+  },
+
+  backToInputOne: function(e){
+    var string='&openId='+this.data.openId
+               +'&nextHDate='+this.data.hDate
+               +'&nickName='+this.data.nickName
+               +'&weight=' + this.data.weight_lasttimeNum
+               +'&onH='+'Y'
+     wx.navigateTo({
+          url: '../inputDataOne/inputDataOne?title=Input Data One'+string,
+        });
+  },
+
+  goToInputTwo: function(e){
+     var string= '&weightToH='+this.data.weightToHNum
+                +'&hDate='+this.data.hDate
+                +'&nickName='+this.data.nickName
+                +'&openId='+this.data.openId
+                +'&weightBeforeH='+this.data.beforeWeightNum
+                +'&lastWeight='+ this.data.weight_lasttimeNum
+                +'&highPressureBefore=' +this.data.bloodHighNum
+                +'&lowPressureBefore='+ this.data.bloodLowNum
+                +'&heartBeatRateB='+ this.data.heartBitNum
+                +'&weightToHadjust'+ this.data.weightToHAdjustNum
+                +'&hospitalName='+ ''
+
+    wx.navigateTo({
+      url: '../inputDataTwo/inputDataTwo?title=Input Data Two'+string,
+    });
   },
 
   /**
