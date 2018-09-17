@@ -78,7 +78,7 @@ Page({
                 beforeHstatus: result.data[0].onH=='N'? false: true ,
                 afterHstatus : result.data[0].onH=='N'? true: false ,
                 service: {
-                  pageTitle: '上机日期 ' + util.formatAll(util.todayDate())+'s' ,// + day + '/' + monthIndex + '/' + year,
+                  pageTitle:  util.formatAll(util.todayDate())+'s' ,// + day + '/' + monthIndex + '/' + year,
                   lastHDate: result.data[0].LastHDate,
                   lastHDateText: text.lastHDateText,
                   lastHWeight: result.data[0].lastWeight,

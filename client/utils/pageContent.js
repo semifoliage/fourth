@@ -35,7 +35,7 @@ var inputDataOneShow = {
 var index = {
     data: {
       newuserWorning: '',
-      bingLiBen: "综合症"
+      bingLiBen: "肾病综合症（透析小本）"
     }
 };
 
@@ -48,9 +48,9 @@ var main= {
           start: '已经开始透析',
           notStart: '未开始透析',
           submit: "submit",
-          inputDataOneNew: '输入上机数据',
-          inputDataOneUpdate: '更新上机数据',
-          inputDataTwo: "输入上机数据",
+          inputDataOneNew: '输入上机透析数据',
+          inputDataOneUpdate: '输入下机透析数据',
+          inputDataTwo: "输入2上机透析数据",
           queryData: "查询透析历史数据",
           listAllData: "list all old data"
         }

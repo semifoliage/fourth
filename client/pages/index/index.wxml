@@ -6,15 +6,16 @@
     <view class="userinfo" >
         <image
                 class="userinfo-avatar"
-                src="../../materials/flappybird_topic.png"
+                src="../../materials/th2.png"
                 background-size="cover"
         ></image>
 
         <view class="userinfoTwo">
             <text class="userinfo-nickname">{{ }}</text>
             <button class="userinfo-nickname" wx:if="{{!logged}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{logged ? userInfo.data.nickName : '点击微信登录'}}</button>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" hover-class="other-button-hover"></image>
             <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.nickName}}</text>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" hover-class="other-button-hover"></image>
+
 
 
         </view>
@@ -51,7 +52,7 @@
             </image>
         </view>
         <view class="bingLiBenText">
-            <text class="loginIconText" bindtap="previewImg">{{list}}</text>
+            <text   bindtap="previewImg" hidden="{{mainIconShow}}">{{list}}</text>
         </view>
     </view>
 

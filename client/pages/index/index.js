@@ -61,6 +61,7 @@ Page({
         userData = e.detail;
         var that=this;
         const session = qcloud.Session.get()
+        console.log(session)
 
         if (session) {
             // 第二次登录
