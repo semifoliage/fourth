@@ -105,7 +105,8 @@ Page({
 
                     console.log('login success and set page data ')
                     this.setData({
-                            userInfo: userAllInfo,
+                        openId: userAllInfo.data.openId,
+                        userInfo: userAllInfo,
                         logged: true
                         })
                     util.showSuccess('登录成功')

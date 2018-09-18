@@ -51,6 +51,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (e) {
+    console.log('option of main page');
+    console.log(e);
     this.setData({
           logged: true,
           userInfo: JSON.parse(e.userInfo),
