@@ -32,7 +32,7 @@
                                 id='bloodHigh'
                                 placeholder='{{weightToHAdjustNum}}'
                                 class='input-format weight_number'
-                                type='number'
+                                type='digit'
                                 bindinput="adjustInput"
                                 auto-focus  >input</input>
                         <label class="kg_format weight_numberText">{{service.kg}}</label>

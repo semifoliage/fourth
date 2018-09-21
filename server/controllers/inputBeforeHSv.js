@@ -3,6 +3,8 @@
 const { message: { checkSignature } } = require('../qcloud')
 var helper = require('../helper/helper.js')
 var db=require('../helper/mysqldb.js');
+var insertDataSql='INSERT  INTO tFirstInput SET ? ';
+var updateDataSql='UPDATE tHdata SET NextHDate= ? , onH= ? WHERE openId= ? ';
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
@@ -43,6 +45,10 @@ async function post(ctx, next) {
    * 解析微信发送过来的请求体
    * 可查看微信文档：https://mp.weixin.qq.com/debug/wxadoc/dev/api/custommsg/receive.html#接收消息和事件
    */
+ var data=ctx.request.body;
+
+ console.log('start firstInput data to table '+ helper.timeStamp())
+ await insertFirstData(data);
 
  /* var data=ctx.request.body;
   var insertResult=await insertData(data);*/
@@ -50,7 +56,7 @@ async function post(ctx, next) {
   ctx.body = ctx.request.body;
   //ctx.body = 'success';
 
-
+        /*
         var date=new Date();
         var dateString=helper.formatTime(date);
 
@@ -65,7 +71,7 @@ async function post(ctx, next) {
                           "weightToH": ctx.request.body.weightToH,
                           "highPressureBefore": ctx.request.body.highPressBefore,
                           "lowPressureBefore": ctx.request.body.lowPressBefore,
-                          "heartBeatRateB": ctx.request.body.heartBeatRateB,
+                          "heartBeatRateB": ctx.request.body.heartBitRateB,
                           "dateToH":ctx.request.body.hDate,
                           "date": dateString,
                           "hospitalName": 'yueyang'
@@ -104,7 +110,7 @@ async function post(ctx, next) {
                   console.log('close connection error -->');
                   throw err
                 };
-            });
+            });  */
 
       };
 
@@ -131,4 +137,46 @@ function getInputBeforeData(sql, data) {
 module.exports = {
   post,
   get
+};
+
+
+function insertFirstData(data){
+    return new Promise((resolve, reject)=>{
+        var date=new Date();
+        var dateString=helper.formatTime(date);
+
+          //insert the firstHalf data to table
+          console.log('insert first data to table '+helper.timeStamp());
+          var results = {
+                          "openId": data.openId,
+                          "nickName": data.nickName,
+                          "lastWeight": data.lastWeight,
+                          "weightBeforeH": data.weightBeforeH,
+                          "weightToH": data.weightToH,
+                          "highPressureBefore": data.highPressBefore,
+                          "lowPressureBefore": data.lowPressBefore,
+                          "heartBeatRateB": data.heartBitRateB,
+                          "dateToH":data.hDate,
+                          "date": dateString,
+                          "hospitalName": 'yueyang'
+                          };
+          db.query(insertDataSql, results, function(res){
+                                  console.log('hFirstData table is updated successfully ')
+
+                  });
+
+           //update the tHdata table
+           console.log('update the tHdata table '+helper.timeStamp());
+           var halfData=[
+                            data.hDate,
+                            'Y',
+                            data.openId
+                        ];
+            db.query(updateDataSql, halfData, function(res){
+                                  console.log('hFirstData table is updated successfully ')
+
+                  });
+            resolve('success')
+
+    })
 }

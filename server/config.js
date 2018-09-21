@@ -8,6 +8,11 @@ const CONF = {
     // 微信小程序 App Secret
     appSecret: '6eb47a9ad96ed38bcdb27fa916739b31',
 
+    //OCR info
+    ocrAppid:  '1257064737',
+    ocrSecredId: 'AKIDoX5TgiBQ2Tktshno6jCUcji7KQM7HNo4',
+    ocrSecretKey: 'KTVNOK9pKgrsmgVAdv3zlaEj5FE7xjKl',
+
     // 是否使用腾讯云代理登录小程序
     useQcloudLogin: true,
 

@@ -2,6 +2,9 @@
 
 const { message: { checkSignature } } = require('../qcloud')
 var helper = require('../helper/helper.js')
+var insertAllSql='INSERT  INTO tHallData SET ? ';
+var updatePartSql='UPDATE tHdata SET nickName= ? , lastWeight = ? , LastHDate = ? , NextHDate = ? , onH= ? WhERE openId= ? ';
+var db=require('../helper/mysqldb.js');
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
@@ -39,14 +42,17 @@ async function post(ctx, next) {
    * 解析微信发送过来的请求体
    * 可查看微信文档：https://mp.weixin.qq.com/debug/wxadoc/dev/api/custommsg/receive.html#接收消息和事件
    */
+  var data=ctx.request.body;
 
+  console.log('call Insertall'+helper.timeStamp())
+  await insertAll(data);
  /* var data=ctx.request.body;
   var insertResult=await insertData(data);*/
   const body = ctx.request.body;
   //ctx.body = ctx.request.body;
   ctx.body = 'success';
 
-
+        /*
         var date=new Date();
         var dateString=helper.formatTime(date);
 
@@ -88,7 +94,11 @@ async function post(ctx, next) {
           });
 
           connection.query(queryString, results, function (err, res) {
-            if (err) {ctx.body=err; throw err;}
+            if (err) {
+                console.log(err);
+                console.log(queryString);
+                console.log(results);
+                throw err;}
 
             console.log('Last record insert id:');
           });
@@ -124,6 +134,8 @@ async function post(ctx, next) {
             };
           });
 
+          */
+
       }
 
 
@@ -133,4 +145,64 @@ async function post(ctx, next) {
 module.exports = {
   post,
   get
+};
+
+function insertAll(data){
+    return new Promise((resolve, reject)=>{
+        var date=new Date();
+        var dateString=helper.formatTime(date);
+
+        var results = {
+                  "openId": data.openId,
+                  "nickName": data.nickName,
+                  "lastWeight": data.lastWeight,
+                  "weightBeforeH": data.weightBeforeH,
+                  "weightToH": data.weightToH,
+                  "highPressureBefore" : data.highPressureBefore,
+                  "lowPressureBefore" : data.lowPressureBefore,
+                  "heartBeatRateB": data.heartBeatRateB,
+                  //"highPressureBefore" : ctx.request.body.highPressureBefore,
+                  //"lowPressureBefore" : ctx.request.body.lowPressureBefore,
+                  //"heartBeatRateB" : ctx.request.body.heartBeatRateB,
+                  "weightAfterH":data.weightAfterH,
+                  "overH":data.overH,
+                  "highPressureAfter":data.highPressureAfter,
+                  "lowPressureAfter":data.lowPressureAfter,
+                  "heartBeatRateA":data.heartBeatRateA,
+                  "dateToH" : data.dateToH,
+                  //"dateToH": ctx.request.body.dateToH,
+                  "date": dateString,
+                  "hDuration": data.hDuration,
+                  "hospitalName": 'yueyang'
+                  };
+
+        //insert all data
+        console.log('insert all data to database'+helper.timeStamp())
+        db.query(insertAllSql, results, function(res){
+                        console.log('all H data inserted to server')
+
+                    } );
+
+        //update hHdata table
+        var date1=new Date();
+        var nextHdate=helper.newHdateCalculate(data.dateToH);
+        var partResult= [
+            data.nickName,
+            data.weightAfterH,
+            data.dateToH,
+            nextHdate,
+            'N',
+            data.openId
+
+        ];
+
+        console.log('update Htabel start '+helper.timeStamp())
+        db.query(updatePartSql, partResult, function(res){
+                        console.log('htable is updated successfully ')
+
+        });
+
+         resolve ('correct');
+
+    })
 }
