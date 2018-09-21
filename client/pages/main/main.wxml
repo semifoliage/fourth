@@ -49,8 +49,8 @@
                     class="inputWeight"
                     placeholder='{{lastHWeight}} kg'
                     bindinput="lastWeightKeyInput"
+                    type="digit"
                     auto-focus
-                    type='digit'
                     >
                 {{service.lastHWeight}} kg
             </input>

@@ -247,6 +247,8 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -623,7 +625,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/utils/pageContent.js">
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-17_03.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="39" column="17" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="17" />
