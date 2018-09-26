@@ -15,9 +15,18 @@ Page({
         takeSession: false,
         requestResult: '',
         mainIconShow: true,
-        list: text.bingLiBen
+        list: text.bingLiBen,
+        reportScan: text.baoGaoSaoMiao
     },
     onLoad: function(options){
+        //check update version
+        var upgrade= wx.getUpdateManager();
+        upgrade.onCheckForUpdate( function(){
+
+
+        })
+
+
         wx.hideTabBar();
         var that =this;
         //
@@ -43,7 +52,7 @@ Page({
                  },
                fail: function(err){
                  console.log('storage userInfo can not be reload.  login is needed. ');
-                 util.showModel('new user', 'login is required');
+                 util.showModel(text.newUserText, text.worningText);
 
 
                }
@@ -61,6 +70,7 @@ Page({
         userData = e.detail;
         var that=this;
         const session = qcloud.Session.get()
+        console.log(session)
 
         if (session) {
             // 第二次登录
@@ -104,7 +114,8 @@ Page({
 
                     console.log('login success and set page data ')
                     this.setData({
-                            userInfo: userAllInfo,
+                        openId: userAllInfo.data.openId,
+                        userInfo: userAllInfo,
                         logged: true
                         })
                     util.showSuccess('登录成功')
@@ -282,7 +293,25 @@ Page({
         }
         util.showBusy('信道连接中...')
         this.setData({ tunnelStatus: 'closed' })
+    },
+
+    //test
+    ocr(e){
+        console.log('collick ocr')
+        var string='';
+        wx.navigateTo({
+                          url: '../scanReport/scanReport?title=Main Page'+string,
+                      })
+        /*wx.request({
+            url:   `${config.service.ocrImageUrl}`,
+                      login: false,
+                      data: {user:e.openId},
+                      success(result) {},
+                      fail(error) {}
+        })*/
     }
+
+
 });
 
 function setStorage (data, that){

@@ -1,6 +1,6 @@
 /* pages/inputDataTwo/inputDataTwo.wxss */
 page {
-    background: bisque;
+    background:white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,8 +34,10 @@ page {
   margin-top: 12rpx;
   margin-left: 10rpx;
   margin-right: 10rpx;
-  font-size:70%;
-
+  font-size:100%;
+  border: 1px solid #c8cccf;
+  border-radius: 2px;
+  text-align:left;
 
 }
 .txt_format{
@@ -43,11 +45,17 @@ page {
   color: black;
 
 }
+
 .num_format{
   font:50, bold;
 
 }
-
+.weight{
+    width :40%;
+}
+.weight_text{
+    margin-left:30rpx;
+}
 .usermotto {
   margin-top: 200px, bold;
 }

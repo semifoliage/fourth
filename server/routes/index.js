@@ -42,6 +42,10 @@ router.get('/userhinfo', controllers.userSv)
 //get user all H data
 router.get('/allhdata', controllers.allRecordsSv)
 
+//Image OCR interfaxe
+router.get('/ocr', controllers.recognizerSv.get)
+router.post('/ocr', controllers.recognizerSv.post)
+
 //test sample
 router.get('/aaa', controllers.aSample)
 

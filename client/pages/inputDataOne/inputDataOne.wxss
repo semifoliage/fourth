@@ -50,8 +50,10 @@ margin-right:40px;
   margin-top: 12rpx;
   margin-left: 10rpx;
   margin-right: 10rpx;
-  font-size:70%;
-
+  font-size:100%;
+  border: 1px solid #c8cccf;
+  border-radius: 2px;
+  text-align:left;
 
 }
 .txt_format{

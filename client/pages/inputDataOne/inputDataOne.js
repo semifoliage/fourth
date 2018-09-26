@@ -55,7 +55,7 @@ Page({
 
   onLoad: function (options) {
     //check the existing records
-    //console.log(options);
+    console.log(options.onH);
     var that =this;
     wx.request({
           url: `${config.service.host}/weapp/input` +'?openId='+options.openId +'&nextHDate='+options.nextHDate,
@@ -94,9 +94,9 @@ Page({
               bloodLowNum: param.lowPressureBefore,
               heartBitNum: param.heartBeatRateB,
               next: pageText.next,
-              nextStatus: options.oH == 'N' ? true: false,
-              save: options.oH == 'N' ? pageText.saveNew :pageText.saveUpdate ,
-              saveStatus: options.oH == 'N' ? false : true,
+              nextStatus: options.onH == 'N' ? true: false,
+              save: options.onH == 'N' ? pageText.saveNew :pageText.saveUpdate ,
+              saveStatus: options.onH == 'N' ? false : true,
               summary: pageText.summary,
               service: {
                 pageTitle: 'Today : ' + options.nextHDate,//util.formatAll(util.todayDate()),
@@ -146,6 +146,12 @@ Page({
 
   //update date once the inputs changed
   inputOneSave: function () {
+    //check the input data valuable 
+    if(this.data.beforeWeightNum==''){
+      util.showModel(pageText.noInputTitle, pageText.noInputContent);
+      return 
+    }
+    //submit the data
     util.showBusy('请求中...')
     var that = this
     console.log('start request  ' + config.service.inputFirstDataUrl)

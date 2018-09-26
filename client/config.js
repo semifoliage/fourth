@@ -51,6 +51,9 @@ var config = {
 
          //input the bH info
          queryAllDataUrl: `${host}/weapp/allhdata`,
+
+         //image Ocr
+         ocrImageUrl: `${host}/weapp/ocr`,
     }
 };
 

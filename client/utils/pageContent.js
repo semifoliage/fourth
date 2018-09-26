@@ -35,7 +35,10 @@ var inputDataOneShow = {
 var index = {
     data: {
       newuserWorning: '',
-      bingLiBen: "综合症"
+      bingLiBen: "肾病综合症（透析小本）",
+      baoGaoSaoMiao:'检查报告扫描',
+      newUserText: '没有登陆',
+      worningText: '请授权登录'
     }
 };
 
@@ -48,9 +51,9 @@ var main= {
           start: '已经开始透析',
           notStart: '未开始透析',
           submit: "submit",
-          inputDataOneNew: '输入上机数据',
-          inputDataOneUpdate: '更新上机数据',
-          inputDataTwo: "输入上机数据",
+          inputDataOneNew: '输入上机透析数据',
+          inputDataOneUpdate: '输入下机透析数据',
+          inputDataTwo: "输入2上机透析数据",
           queryData: "查询透析历史数据",
           listAllData: "list all old data"
         }
@@ -72,7 +75,9 @@ var inputDataOne={
         next: '输入下机数据',
         saveNew:'输入上机数据',
         saveUpdate:'上机数据已经输入',
-        summary:'展示上机数据给医生'
+        summary:'展示上机数据给医生',
+        noInputTitle: '数据未输入',
+        noInputContent: '上机前体重'
 
     }
 };
@@ -92,6 +97,8 @@ var inputDataTwo={
         inputValue: '',
         saveNext: "Save and Next",
         save: "保存数据",
+        noInputTitle: '数据未输入',
+        noInputContent: '下机后体重'
     }
 };
 

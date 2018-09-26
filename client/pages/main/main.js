@@ -51,6 +51,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (e) {
+    console.log('option of main page');
+    console.log(e);
     this.setData({
           logged: true,
           userInfo: JSON.parse(e.userInfo),
@@ -78,7 +80,7 @@ Page({
                 beforeHstatus: result.data[0].onH=='N'? false: true ,
                 afterHstatus : result.data[0].onH=='N'? true: false ,
                 service: {
-                  pageTitle: '上机日期 ' + util.formatAll(util.todayDate())+'s' ,// + day + '/' + monthIndex + '/' + year,
+                  pageTitle:  util.formatAll(util.todayDate())+'s' ,// + day + '/' + monthIndex + '/' + year,
                   lastHDate: result.data[0].LastHDate,
                   lastHDateText: text.lastHDateText,
                   lastHWeight: result.data[0].lastWeight,

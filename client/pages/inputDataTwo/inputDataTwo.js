@@ -3,6 +3,7 @@
  var qcloud = require('../../vendor/wafer2-client-sdk/index');
  var config = require('../../config');
  var util = require('../../utils/util.js');
+ var services= require('../../utils/services');
  var page=require('../../utils/pageContent.js')
  var pageText=page.inputDataTwo.data
  var beforeHData={};
@@ -75,13 +76,13 @@
        bloodLowPAfterNum: '',
        heartBitAfterNum: '',
        hDurationNum: '4',
-       overHWarning:'',
+       overHWarning:false,
        service: {
          pageTitle: 'Today is ' + util.formatAll(new Date()),
          weight_toH: pageText.weight_toH,
          afterWeight: pageText.afterWeight,
          weightH:pageText.weightH,
-         OverH:pageText.overH,
+         OverH:pageText.OverH,
          bloodHighPressureAfter: pageText.bloodHighPressureAfter,
          bloodLowPressureAfter: pageText.bloodLowPressureAfter,
          heartBitAfter: pageText.heartBitAfter,
@@ -98,6 +99,11 @@
      })
    },
    beforeWeightKeyInput: function (option) {
+     //number validate
+    if(!services.numberValidate(option.detail.value)&& option.detail.cursor==0){
+      return
+    }
+    //weight value calculation
      var newWeight = option.detail.value;
      var cleanWeight = this.data.weightBeforeHNum-newWeight;
      var overWeight=cleanWeight.toFixed(1)-this.data.weight_toHNum;
@@ -111,29 +117,38 @@
      })
    },
    dataKeyInput: function(e){
-         switch(e.target.id)
-             {
-                 case 'bloodPresssureHighA':
-                     this.setData({
-                       bloodHighPAfterNum:e.detail.value
-                     });
-                     break;
-                 case 'bloodPressureLowA':
-                     this.setData({
-                       bloodLowPAfterNum: e.detail.value
-                     });
-                     break;
-                 case 'heartBitA':
-                   this.setData({
-                     heartBitAfterNum: e.detail.value
-                   });
-                   break;
-             }
+       //number validate
+    if(!services.numberValidate(e.detail.value)&& e.detail.cursor==0){
+      return
+    }
+      switch(e.target.id)
+          {
+              case 'bloodPresssureHighA':
+                  this.setData({
+                    bloodHighPAfterNum:e.detail.value
+                  });
+                  break;
+              case 'bloodPressureLowA':
+                  this.setData({
+                    bloodLowPAfterNum: e.detail.value
+                  });
+                  break;
+              case 'heartBitA':
+                this.setData({
+                  heartBitAfterNum: e.detail.value
+                });
+                break;
+          }
 
 
    },
 
    submit: function () {
+     //check the input data valuable 
+    if(this.data.weightAfterHNum==''){
+      util.showModel(pageText.noInputTitle, pageText.noInputContent);
+      return 
+    }
      //map the data of two phases, before H and after H
      var afterData={
                  weightAfterH: this.data.weightAfterHNum,

@@ -17,6 +17,7 @@
                                 placeholder='{{beforeWeightNum}}'
                                 class='input-format'
                                 bindinput="beforeWeightKeyInput"
+                                type="digit"
                                 auto-focus
 
                         />
@@ -27,7 +28,7 @@
                     </view>
                 </view>
 
-                <view class="flex-wrp bc_whitesmoke" style="flex-direction:row">
+                <view class="flex-wrp bc_white" style="flex-direction:row">
                     <view class="flex-wrp " style="flex-direction:column">
                         <label class="txt_format">{{service.bloodHigh}}</label>
                         <input
@@ -67,7 +68,7 @@
     </view>
     <view class="flex-wrp" style="flex-direction:column">
         <view class="flex-wrp" style="flex-direction:row">
-    <button id="item-{{id}}" plain='false' disabled="{{saveStatus}}" bindtap="inputOneSave" class='saveButton'>{{save}}</button>
+    <button id="item-{{id}}" plain='false' disabled="{{saveStatus}}" bindtap="inputOneSave" class='saveButton '>{{save}}</button>
     <button id="item-{{id}}" plain='false' disabled="{{!saveStatus}}" bindtap="inputOneSummary" class='summaryButton'>{{summary}}</button>
     </view>
 

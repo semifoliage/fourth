@@ -6,15 +6,16 @@
     <view class="userinfo" >
         <image
                 class="userinfo-avatar"
-                src="../../materials/flappybird_topic.png"
+                src="../../materials/th2.png"
                 background-size="cover"
         ></image>
 
         <view class="userinfoTwo">
             <text class="userinfo-nickname">{{ }}</text>
             <button class="userinfo-nickname" wx:if="{{!logged}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{logged ? userInfo.data.nickName : '点击微信登录'}}</button>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" hover-class="other-button-hover"></image>
             <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.nickName}}</text>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" hover-class="other-button-hover"></image>
+
 
 
         </view>
@@ -51,8 +52,35 @@
             </image>
         </view>
         <view class="bingLiBenText">
-            <text class="loginIconText" bindtap="previewImg">{{list}}</text>
+            <text   bindtap="previewImg" hidden="{{mainIconShow}}">{{list}}</text>
         </view>
     </view>
+    <view class="loginIcon">
+        <view class="bingLiBen">
+            <image
+                    id="image"
+                    class="loginIconImage"
+                    src="../../materials/medicalReport.png"
+                    bindtap="ocr"
+                    background-size="cover"
+                    hidden="{{mainIconShow}}"
+                    mode="scaleToFill">
 
+            </image>
+        </view>
+        <view class="bingLiBenText">
+            <text   bindtap="previewImg" hidden="{{mainIconShow}}">{{reportScan}}</text>
+        </view>
+    </view>
+  
+
+
+
+
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-footer__links">
+            <navigator url="" class="weui-footer__link">Version 1.0.0.1</navigator>
+        </view>
+        <view class="weui-footer__text">Copyright © 2008-2026 softlifework.club</view>
+    </view>
 </view>

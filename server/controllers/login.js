@@ -48,7 +48,8 @@ module.exports = async (ctx, next) => {
 
      //collect user nickName and openId, session_key
      console.log('request openid and session_key from qq');
-     var data=JSON.parse(await openIdRequest(urlString));
+     var openIdData=refineOpenId(await openIdRequest(urlString))
+     var data=openIdData;
      var userInfo=JSON.parse(ctx.request.query.userInfo);
      var user=data;
      //delete data.session_key;
@@ -65,7 +66,7 @@ module.exports = async (ctx, next) => {
 
      //check openId exist, if not create the user and initate data
      var check =await checkUser(users);
-     console.log('checkuser result '+helper.timeStamp());
+     console.log(helper.timeStamp()+'--checkuser result ');
      console.log(check );
 
      ctx.response.type='JSON';
@@ -78,14 +79,16 @@ module.exports = async (ctx, next) => {
       https.get(url, (res) => {
         res.on('data', (chunk) => {
           result += chunk;
-          resolve(result);
+          console.log(helper.timeStamp()+'--query the openid')
+          //console.log(result)
+          resolve(result)
         });
         res.on('error', (error) => {
           console.log(error);
           reject(error);
         });
         res.on('end', () => {
-          console.log('https.get openid end :'+helper.timeStamp());
+          console.log(helper.timeStamp()+'--https.get openid end :');
         });
 
       });
@@ -103,7 +106,7 @@ async function checkUser ( user){
           var queryStatus='';
 
         if(queryJson=='[]'){
-            console.log('user does not exist, user data and initiate data are created' + helper.timeStamp());
+            console.log(helper.timeStamp()+'--user does not exist, user data and initiate data are created' );
 
             //create new user
             createNewUser(newUserSQL, user);
@@ -120,7 +123,7 @@ async function checkUser ( user){
 
             return (newUser);
         }else {
-            console.log('user exist ' +helper.timeStamp());
+            console.log(helper.timeStamp()+'user exist ' );
             //remove the sessionkey info and add query info
             var newQuery=query[0];
             console.log(newQuery);
@@ -154,7 +157,7 @@ async function checkUser ( user){
             "role2": '1'
         };
         db.insert(sql, data, function(res){
-            console.log('insert new user to tAccount table ' +helper.timeStamp())
+            console.log(helper.timeStamp()+'--insert new user to tAccount table ' )
             return res;
         });
 
@@ -189,7 +192,7 @@ async function checkUser ( user){
             "onH": 'N'
         };
         db.insert(sql, data, function(res){
-            console.log('insert initial data to tHData table '+helper.timeStamp())
+            console.log(helper.timeStamp()+'insert initial data to tHData table ')
             return res;
         })
 
@@ -205,7 +208,7 @@ function existUser(sql, user){
                     for (var i in res){
                         data.push(res[i]);
                     };
-                    console.log('check user exist or not-->' +helper.timeStamp())
+                    console.log(helper.timeStamp()+'check user exist or not-->' )
                     //console.log(sql + user);
                     //console.log(data);
                    resolve(data);
@@ -219,5 +222,19 @@ function existUser(sql, user){
 //create random code for name
 function radomName(name){
     return name+Math.round(Math.random()*100);
+
+};
+
+//convert the openid string if the return a string
+function refineOpenId(string){
+
+          if (string.indexOf('errcode')){
+                var resultString=string.split('}');
+                string = JSON.parse(resultString[0] + '}');
+
+            };
+            console.log(helper.timeStamp()+'--convert openid')
+            return string;
+
 
 }

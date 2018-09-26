@@ -2,15 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10d9d60a-d78f-4b1f-91bd-311b6ba06b16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../first/client/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../first/client/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first/client/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../first/client/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first/client/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../first/client/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first/client/vendor/wafer2-client-sdk/lib/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../first/client/vendor/wafer2-client-sdk/lib/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../first/project.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/scanReport/scanReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/scanReport/scanReport.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/scanReport/scanReport.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/utils/pageContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/utils/services.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/allRecordsSv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/inputAfterHSv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/inputBeforeHSv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/recognizerSv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/userSv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/helper/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/helper/mysqldb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/middlewares/recognizer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstApp.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstApp/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../firstApp/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/app.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/pages/index/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/pages/index/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/pages/queryuser/queryuser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/pages/queryuser/queryuser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/pages/queryuser/queryuser.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/pages/queryuser/queryuser.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/pages/queryuser/queryuser.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/pages/queryuser/queryuser.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/utils/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/lib/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/lib/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/lib/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/lib/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/lib/session.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/lib/session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/server/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/server/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/server/controllers/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/server/controllers/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/server/controllers/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/server/controllers/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/server/controllers/queryuser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/server/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/server/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../secondApp/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../secondApp/server/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/client/app.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/main/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/main/main.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/main/main.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/main/main.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/main/main.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/utils/pageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/pageContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/inputAfterHSv.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/inputAfterHSv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/inputBeforeHSv.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/inputBeforeHSv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,72 +79,59 @@
     <session id="-1763671711">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="99" />
-          <entry key="json" value="10" />
-          <entry key="log" value="12" />
-          <entry key="wxml" value="34" />
-          <entry key="wxss" value="20" />
+          <entry key="js" value="170" />
+          <entry key="json" value="15" />
+          <entry key="log" value="55" />
+          <entry key="md" value="3" />
+          <entry key="wxml" value="65" />
+          <entry key="wxss" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="10" />
-          <entry key="JavaScript" value="99" />
-          <entry key="PLAIN_TEXT" value="32" />
-          <entry key="XML" value="34" />
+          <entry key="JSON" value="15" />
+          <entry key="JavaScript" value="170" />
+          <entry key="PLAIN_TEXT" value="91" />
+          <entry key="XML" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="8480" />
-          <entry key="json" value="101" />
-          <entry key="wxml" value="662" />
-          <entry key="wxss" value="435" />
+          <entry key="js" value="13829" />
+          <entry key="json" value="143" />
+          <entry key="log" value="1" />
+          <entry key="wxml" value="1147" />
+          <entry key="wxss" value="765" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="101" />
-          <entry key="JavaScript" value="8480" />
-          <entry key="PLAIN_TEXT" value="435" />
-          <entry key="XML" value="662" />
+          <entry key="JSON" value="143" />
+          <entry key="JavaScript" value="13829" />
+          <entry key="PLAIN_TEXT" value="766" />
+          <entry key="XML" value="1147" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/utils/services.js">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../forthApp/fifth/fourth/client/pages/main/main.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="56" column="18" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inputDataOne.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inputDataOneShow.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="118" column="27" lean-forward="true" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
+            <state relative-caret-position="884">
+              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -107,6 +153,10 @@
       <find>userinfo-avatar</find>
       <find>bookDetail</find>
       <find>setStorage</find>
+      <find>picker</find>
+      <find>uploader-text</find>
+      <find>heartBitNum</find>
+      <find>getInputBeforeData</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,48 +167,55 @@
       <list>
         <option value="$PROJECT_DIR$/server/helper/helper.js" />
         <option value="$PROJECT_DIR$/server/helper/mysqldb.js" />
-        <option value="$PROJECT_DIR$/server/routes/index.js" />
         <option value="$PROJECT_DIR$/client/vendor/wafer2-client-sdk/index.js" />
-        <option value="$PROJECT_DIR$/client/config.js" />
         <option value="$PROJECT_DIR$/server/controllers/user.js" />
-        <option value="$PROJECT_DIR$/client/pages/main/main.wxss" />
         <option value="$PROJECT_DIR$/client/app.js" />
         <option value="$PROJECT_DIR$/client/vendor/wafer2-client-sdk/lib/login.js" />
-        <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxml" />
-        <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxss" />
         <option value="$PROJECT_DIR$/client/pages/queryList/queryList.wxml" />
         <option value="$PROJECT_DIR$/client/pages/queryList/queryList.wxss" />
         <option value="$PROJECT_DIR$/client/utils/util.js" />
         <option value="$PROJECT_DIR$/server/controllers/allRecordsSv.js" />
-        <option value="$PROJECT_DIR$/server/controllers/inputAfterHSv.js" />
         <option value="$PROJECT_DIR$/server/controllers/userSv.js" />
-        <option value="$PROJECT_DIR$/server/controllers/inputBeforeHSv.js" />
-        <option value="$PROJECT_DIR$/server/controllers/login.js" />
         <option value="$PROJECT_DIR$/client/utils/services.js" />
         <option value="$PROJECT_DIR$/client/pages/queryList/queryList.js" />
-        <option value="$PROJECT_DIR$/client/app.json" />
         <option value="$PROJECT_DIR$/client/pages/index/index.wxss" />
-        <option value="$PROJECT_DIR$/client/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/client/pages/queryDetail/queryDetail.wxml" />
-        <option value="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml" />
-        <option value="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml" />
-        <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js" />
         <option value="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxss" />
-        <option value="$PROJECT_DIR$/client/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxss" />
-        <option value="$PROJECT_DIR$/client/utils/pageContent.js" />
-        <option value="$PROJECT_DIR$/client/pages/main/main.wxml" />
-        <option value="$PROJECT_DIR$/client/pages/main/main.js" />
         <option value="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js" />
         <option value="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.js" />
+        <option value="$PROJECT_DIR$/client/app.wxss" />
+        <option value="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxss" />
+        <option value="$PROJECT_DIR$/client/pages/main/main.wxss" />
+        <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxss" />
+        <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js" />
+        <option value="$PROJECT_DIR$/server/controllers/inputAfterHSv.js" />
+        <option value="$PROJECT_DIR$/server/controllers/inputBeforeHSv.js" />
+        <option value="$PROJECT_DIR$/client/pages/main/main.js" />
+        <option value="$PROJECT_DIR$/client/config.js" />
+        <option value="$PROJECT_DIR$/server/config.js" />
+        <option value="$PROJECT_DIR$/server/routes/index.js" />
+        <option value="$PROJECT_DIR$/server/middlewares/recognizer.js" />
+        <option value="$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_11.log" />
+        <option value="$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_02.log" />
+        <option value="$PROJECT_DIR$/client/app.json" />
+        <option value="$PROJECT_DIR$/client/pages/scanReport/scanReport.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/scanReport/scanReport.js" />
+        <option value="$PROJECT_DIR$/server/controllers/login.js" />
+        <option value="$PROJECT_DIR$/client/pages/main/main.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml" />
+        <option value="$PROJECT_DIR$/client/utils/pageContent.js" />
+        <option value="$PROJECT_DIR$/client/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/client/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/server/controllers/recognizerSv.js" />
+        <option value="$PROJECT_DIR$/../forthApp/fifth/fourth/client/pages/main/main.wxml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="351" />
-    <option name="y" value="6" />
-    <option name="width" value="1378" />
-    <option name="height" value="780" />
+    <option name="width" value="640" />
+    <option name="height" value="515" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -166,94 +223,85 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="materials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="inputDataOne" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="inputDataOneShow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="inputDataTwo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="fourth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fourth" type="462c0819:PsiDirectoryNode" />
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="middlewares" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thirdApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thirdApp" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536912685467" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/node-log-2018-09-15.log" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537519925281" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forthApp/fifth/fourth/client/pages/main/main.wxml" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -270,44 +318,23 @@
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -324,349 +351,344 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19692533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20738254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32932332" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1932886" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/client/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/scanReport/scanReport.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_02.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_03.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_04.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/scanReport/scanReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_05.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        <state relative-caret-position="425">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_06.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_07.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_08.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_09.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_10.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_11.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-19_12.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../secondApp/server/controllers/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2747" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../secondApp/client/vendor/wafer2-client-sdk/lib/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="80" column="19" lean-forward="true" selection-start-line="75" selection-start-column="18" selection-end-line="80" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21_01.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21_02.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21_03.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21_04.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/style/example/footer/footer.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="15" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/style/example/dialog/dialog.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" selection-start-line="1" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/main/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/style/example/dialog/dialog.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/main/main.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/utils/pageContent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="53" column="66" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/nodemon.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/process.prod.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/qcloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/tools.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/tools/initdb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-163" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/main/main.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/vendor/wafer2-client-sdk/lib/request.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/vendor/wafer2-client-sdk/lib/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="111" column="37" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-12_3.log" />
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/utils/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="137" column="91" selection-start-line="137" selection-start-column="91" selection-end-line="137" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/allRecordsSv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/inputAfterHSv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-12_9.log" />
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-12_10.log" />
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-12_11.log" />
-    <entry file="file://$PROJECT_DIR$/client/pages/chess/chess.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="65" column="2" lean-forward="true" selection-start-line="1" selection-end-line="65" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-13.log" />
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-13_01.log" />
-    <entry file="file://$PROJECT_DIR$/server/controllers/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="168" column="18" selection-start-line="168" selection-start-column="18" selection-end-line="168" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-13_prod_01.log" />
-    <entry file="file://$PROJECT_DIR$/client/pages/queryDetail/queryDetail.wxss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="336" column="40" selection-start-line="336" selection-start-column="40" selection-end-line="336" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app.wxss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-333">
-          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/userSv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryList/queryList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/index/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-14.log" />
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryDetail/queryDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/queryDetail/queryDetail.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/node-log-2018-09-15.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="71" column="62" lean-forward="true" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/inputBeforeHSv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="82" column="38" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="69" column="89" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataTwo/inputDataTwo.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="82" column="54" lean-forward="true" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="90" column="20" lean-forward="true" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/utils/pageContent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="41" column="68" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/main/main.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
+        <state relative-caret-position="405">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/main/main.js">
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21_06.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21_07.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21_08.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="180" column="7" lean-forward="true" selection-start-line="178" selection-start-column="6" selection-end-line="180" selection-end-column="7" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/utils/services.js">
+    <entry file="file://$USER_HOME$/Desktop/logFiles/node-log-2018-09-21_05.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/recognizerSv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="18" />
+        <state relative-caret-position="442">
+          <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOne/inputDataOne.js">
+    <entry file="file://$PROJECT_DIR$/../forthApp/fifth/fourth/client/pages/main/main.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/inputDataOneShow/inputDataOneShow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="118" column="27" lean-forward="true" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
+        <state relative-caret-position="884">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
         </state>
       </provider>
     </entry>
