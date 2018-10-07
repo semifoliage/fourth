@@ -5,6 +5,9 @@ var helper = require('../helper/helper.js')
 var insertAllSql='INSERT  INTO tHallData SET ? ';
 var updatePartSql='UPDATE tHdata SET nickName= ? , lastWeight = ? , LastHDate = ? , NextHDate = ? , onH= ? WhERE openId= ? ';
 var db=require('../helper/mysqldb.js');
+var dbPool=require('../helper/mysqlPool');
+
+var queryIdDateSql='select * from tHallData where openId= ? and nextHdate= ?'
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
@@ -17,13 +20,21 @@ var connection = mysql.createConnection({
 
 
 /**
- * 响应 GET 请求（响应微信配置时的签名检查请求）
+ * response get request
  */
 async function get(ctx, next) {
 
   //const { signature, timestamp, nonce, echostr } = ctx.query
   // if (checkSignature(signature, timestamp, nonce)) ctx.body = echostr
   //else ctx.body = 'ERR_WHEN_CHECK_SIGNATUREdddd'
+
+  var openId=ctx.request.body.openId;
+  var nextHdate=ctx.request.body.nextHdate;
+  var queryData=[openId, nextHdate];
+
+  //check exist data
+  console.log(helper.timeStamp()+'--query exist records by openid and nextHdate')
+  var checkExistData=await queryIdDate(queryData);
 
   ctx.response.type = 'text/html';
   //ctx.response.type = 'JSON';
@@ -32,6 +43,10 @@ async function get(ctx, next) {
 
   ctx.body = ctx.request.body;
 }
+
+/**
+ * response Post request 
+ */
 
 async function post(ctx, next) {
   // 检查签名，确认是微信发出的请求
@@ -205,4 +220,18 @@ function insertAll(data){
          resolve ('correct');
 
     })
+};
+
+function queryIdDate(data){
+  return new Promise((resolve, reject)=>{
+    dbPool.query(queryIdDateSql, data, function(res){
+      console.log(helper.timeStamp()+'query tHallData table to get openid and nextHdate successfully ')
+      resolve(res);
+    })
+
+
+  })
+
 }
+
+

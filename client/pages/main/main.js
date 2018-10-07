@@ -119,6 +119,10 @@ Page({
           beforeHstatus: true
 
       })*/
+      //check the nextHDate is existing in tHallData table or not
+      var check=queryExistData(this.data.openId, this.data.nextHDate)
+      console.log(check)
+
       var string='?title=Input Data One&weight=' + this.data.lastHWeight
                   + '&nextHDate=' + this.data.nextHDate
                   +'&nickName='+this.data.nickName
@@ -163,6 +167,7 @@ Page({
     bindDateChange: function(e){
       console.log('picker发送选择改变，携带值为', e.detail.value);
       console.log(e);
+      
       if(e.target.id=='lastHDate'){
         this.setData({
           lastHDate: e.detail.value
@@ -278,5 +283,29 @@ function queryUserInitialData(data, sql){
 
     })
 
+
+};
+
+function queryExistData(user, date){
+  return new Promise((resolve, reject)=>{
+    wx.request({
+      url: `${config.service.inputSecondDataUrl}`,
+      login: false,
+      data:{
+        openId: this.data.openId,
+        nextHDate: this.data.nextHDate
+      },
+      success(result){
+        console.log('nextHdate is checked in database');
+        console.log(result)
+        resolve(result)
+      },
+      fail(error){
+        util.showModel('请求失败', error);
+        console.log('request fail', error);
+      }
+
+    })
+  })
 
 }
