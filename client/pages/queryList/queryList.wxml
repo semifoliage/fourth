@@ -11,6 +11,9 @@
     <view>
         <text class="userinfo-nickname" bindtap=" ">{{logged ? userInfo.nickName : 'List Last H data'}}</text>
     </view>
+    <view class="page__bd newRecord ">
+            <button class="weui-btn mini-btn newRecord" type="primary" size="mini" bindtap="showDialogBtn">+ newRecord</button>
+    </view>
 </view>
 <view class="searchs">
 <view class="section">
@@ -84,6 +87,214 @@
 
 </scroll-view>
 </view>
+
+
+
+<!--popup window-->
+
+        <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+        <view class="modal-dialog" wx:if="{{showModal}}">
+
+            <view class="modal-title">{{service.dataInput}} </view>
+            <view >
+                <label>{{userInfo.nickName}}</label> 
+                <view class="flex-wrp picker " style="flex-direction:row">
+                    <label>{{service.today}}:</label>
+                    <text>{{today}}</text>
+                </view>
+                <view class="flex-wrp user-motto " style="flex-direction:row">                    
+                    <picker id='lastHDate' mode="date" value="{{lastHDate}}" start="2018-08-01" end="2020-09-01" bindchange="bindDateChange">
+                        <view class="picker ">
+                            {{service.lastHDateText}}: {{lastHDate}}
+                        </view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="modal-content">
+                <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">星期一的内容
+                      <view class="flex-wrp user-motto " style="flex-direction:row">   
+                        <text class=" userinfo-avata"  >{{service.weightLastTime}}</text>
+                        <input
+                            id='weightLastTimeNum'
+                            placeholder='Please input'
+                            class='input-format'
+                            bindinput="dataKeyInput"
+                            auto-focus
+                            style='digit'> </input>
+                        
+                      </view>
+                      <view class="flex-wrp user-motto " style="flex-direction:row"> 
+                        <text class="  userinfo-avata"  >{{service.weightBeforeH}}</text>
+                        <input
+                            id='weightBeforeHNum'
+                            placeholder='Please input'
+                            class='input-format'
+                            bindinput="dataKeyInput"
+                            auto-focus
+                            style='digit'> </input>
+                         
+                      </view>
+                      <view class="flex-wrp user-motto " style="flex-direction:column"> 
+                        <view class="flex-wrp user-motto " style="flex-direction:row">   
+                            <text class="  userinfo-avata"  >{{service.weight_toH}}</text>
+                            <label class=" num_format">{{weight_toHNum}}</label>
+                        </view>
+                        <view class="flex-wrp user-motto " style="flex-direction:row"> 
+                            <text class="  userinfo-avata"  >{{service.adjuestWeight_toH}}</text>
+                            <input
+                                id='adjuestWeight_toHNum'
+                                placeholder='Please input'
+                                class='input-format'
+                                bindinput="dataKeyInput"
+                                auto-focus
+                                style='digit'> </input>
+                             
+                        </view> 
+                      </view>
+                        <view class="flex-wrp bc_whitesmoke" style="flex-direction:column">
+                            <view class="flex-wrp " style="flex-direction:row">
+                                <label class="txt_format">{{service.bloodHighPressureBefore}}</label>
+                                <input
+                                        id='bloodPresssureHighB'
+                                        placeholder='Please input'
+                                        class='input-format'
+                                        bindinput="dataKeyInput"
+                                        auto-focus
+                                        style='number'> </input>
+                            </view>
+                            <view class="flex-wrp" style="flex-direction:row">
+                                <label class="txt_format">{{service.bloodLowPressureBefore}}</label>
+                                <input
+                                        id='bloodPressureLowB'
+                                        placeholder='Please input'
+                                        class='input-format'
+                                        bindinput="dataKeyInput"
+                                        auto-focus
+                                        style='number'>{{weightToHNum}}</input>
+                            </view>
+                            <view class="flex-wrp" style="flex-direction:row">
+                                <label class="txt_format">{{service.heartBitBefore}}</label>
+                                <input
+                                        id='heartBitB'
+                                        placeholder='Please input'
+                                        class='input-format'
+                                        bindinput="dataKeyInput"
+                                        auto-focus
+                                        style='number' >{{service.weightToHNum}}</input>
+                            </view>
+                        </view> 
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">星期二的内容
+                    <view class="flex-wrp user-motto " style="flex-direction:column">
+                        <view class="flex-wrp user-motto" style="flex-direction:row">
+                            <label class="txt_format">{{service.afterHWeight}}</label>
+                            <input
+                                    id='afterHweight'
+                                    placeholder='Please input'
+                                    class='input-format'
+                                    bindinput="beforeWeightKeyInput"
+                                    auto-focus
+
+                            />
+                        </view>
+                        <view class="flex-wrp user-motto" style="flex-direction:row">
+                            <label class="txt_format">{{service.weightH}}</label>
+                            <text class='num_format'>{{weightHNum}}</text>
+                        </view>
+                        <view class="flex-wrp user-motto" style="flex-direction:row">
+                            <label class="txt_format">{{service.OverH}}</label>
+                            <text class='num_format'>{{overHNum}}</text>
+                        </view>
+                        <view class="group">
+                            <block wx:key="{{overHWarning}}">
+                                <icon type="download" size="20" color="red"/>
+                            </block>
+                        </view>
+
+                    </view>
+                    <view class="flex-wrp user-motto " style="flex-direction:column">
+                            <view class="flex-wrp" style="flex-direction:row">
+                                <label class="txt_format">{{service.hDuration}}</label>
+                                <text class='num_format'>{{hDuration}}</text>
+                            </view>
+                            <view class="flex-wrp bc_whitesmoke" style="flex-direction:column">
+                                <view class="flex-wrp " style="flex-direction:row">
+                                    <label class="txt_format">{{service.bloodHighPressureAfter}}</label>
+                                    <input
+                                            id='bloodPresssureHighA'
+                                            placeholder='Please input'
+                                            class='input-format'
+                                            bindinput="dataKeyInput"
+                                            auto-focus
+                                            style='number'> </input>
+                                </view>
+                                <view class="flex-wrp" style="flex-direction:row">
+                                    <label class="txt_format">{{service.bloodLowPressureAfter}}</label>
+                                    <input
+                                            id='bloodPressureLowA'
+                                            placeholder='Please input'
+                                            class='input-format'
+                                            bindinput="dataKeyInput"
+                                            auto-focus
+                                            style='number'>{{weightToHNum}}</input>
+                                </view>
+                                <view class="flex-wrp" style="flex-direction:row">
+                                    <label class="txt_format">{{service.heartBitAfter}}</label>
+                                    <input
+                                            id='heartBitA'
+                                            placeholder='Please input'
+                                            class='input-format'
+                                            bindinput="dataKeyInput"
+                                            auto-focus
+                                            style='number' >{{service.weightToHNum}}</input>
+                                </view>
+                            </view>
+                    </view>
+                 </view>
+            </view>
+        </view>
+
+                    <view class="flex-wrp" style="flex-direction:row">
+                        <view class="flex-wrp" style="flex-direction:column;">
+                            <form class="flex-item bc_whitesmoke" >
+                                                              
+
+                                
+
+                            </form>
+
+                        </view>
+
+                    </view>
+                    <view class="modal-input">
+
+                    <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="输入备注"></input>
+
+                </view>
+
+            </view>
+
+            <view class="modal-footer">
+
+                <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+
+                <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+
+            </view>
+
+        </view>
 
 
 

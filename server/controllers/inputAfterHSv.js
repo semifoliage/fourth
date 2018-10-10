@@ -7,7 +7,7 @@ var updatePartSql='UPDATE tHdata SET nickName= ? , lastWeight = ? , LastHDate = 
 var db=require('../helper/mysqldb.js');
 var dbPool=require('../helper/mysqlPool');
 
-var queryIdDateSql='select * from tHallData where openId= ? and nextHdate= ?'
+var queryIdDateSql='select * from tHallData where openId= ? and dateToH = ?'
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
@@ -28,9 +28,9 @@ async function get(ctx, next) {
   // if (checkSignature(signature, timestamp, nonce)) ctx.body = echostr
   //else ctx.body = 'ERR_WHEN_CHECK_SIGNATUREdddd'
 
-  var openId=ctx.request.body.openId;
-  var nextHdate=ctx.request.body.nextHdate;
-  var queryData=[openId, nextHdate];
+  var openId=ctx.request.query.openId;
+  var nextHDate=ctx.request.query.nextHDate;
+  var queryData=[openId, nextHDate];
 
   //check exist data
   console.log(helper.timeStamp()+'--query exist records by openid and nextHdate')
@@ -41,7 +41,7 @@ async function get(ctx, next) {
   //responce body
   //ctx.body = ctx.request.body;
 
-  ctx.body = ctx.request.body;
+  ctx.body = checkExistData;
 }
 
 /**
@@ -225,7 +225,8 @@ function insertAll(data){
 function queryIdDate(data){
   return new Promise((resolve, reject)=>{
     dbPool.query(queryIdDateSql, data, function(res){
-      console.log(helper.timeStamp()+'query tHallData table to get openid and nextHdate successfully ')
+      console.log(helper.timeStamp()+'--query tHallData table to get openid and nextHdate successfully ')
+      console.log(res);
       resolve(res);
     })
 

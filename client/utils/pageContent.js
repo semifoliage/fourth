@@ -55,7 +55,9 @@ var main= {
           inputDataOneUpdate: '输入下机透析数据',
           inputDataTwo: "输入2上机透析数据",
           queryData: "查询透析历史数据",
-          listAllData: "list all old data"
+          listAllData: "list all old data",
+          nextHdateExist: '输入的下次透析日期已经存在',
+          inputNewDate: '请重新选择'
         }
 };
 
@@ -102,4 +104,31 @@ var inputDataTwo={
     }
 };
 
-module.exports = {index, inputDataOneShow, main, inputDataOne, inputDataTwo}
+var queryList={
+    data:{
+        before:'上机',
+        after:'下机',
+        dataInput:'输入新数据',
+        today: '今日日期',
+        lastHDateText: '透析日期',
+        weightBeforeH:'上机前体重',
+        weight_toH: '需要透析重量',
+        afterWeight: '下机后体重',
+        weightH:'实际透析重量',
+        OverH:'超透重量',
+        hDuration: '透析用时',
+        bloodHighPressureBefore:'高血压',
+        bloodLowPressureBefore: '低血压',
+        heartBitBefore:'心率',
+        afterHWeight: '下机后体重',
+        weightLastTime:'上次下机体重',
+        adjuestWeight_toH:'调整后透析重量',
+        bloodHighPressureAfter:'高血压',
+        bloodLowPressureAfter:'低血压',
+        heartBitAfter:'心率',
+        nextHdateExist: '输入的下次透析日期已经存在',
+        inputNewDate: '请重新选择'
+    }
+}
+
+module.exports = {index, inputDataOneShow, main, inputDataOne, inputDataTwo ,queryList}
