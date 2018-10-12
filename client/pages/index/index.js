@@ -16,7 +16,8 @@ Page({
         requestResult: '',
         mainIconShow: true,
         list: text.bingLiBen,
-        reportScan: text.baoGaoSaoMiao
+        reportScan: text.baoGaoSaoMiao,
+        healthCare: text.healthCare
     },
     onLoad: function(options){
         //check update version

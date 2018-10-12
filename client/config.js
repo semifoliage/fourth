@@ -1,8 +1,8 @@
 /**
- * 小程序配置文件
+ * 小程序配置文件     
  */
 
-// 此处主机域名修改成腾讯云解决方案分配的域名
+// 此处主机域名修改成腾讯云解决方案分配的域名 
 var host = 'https://kt3pqsbq.qcloud.la';
 //var host ='https://518516255.softworklife.club';
 
