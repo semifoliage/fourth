@@ -98,6 +98,24 @@
             <text   bindtap="previewImg" hidden="{{coverbackShow}}">{{healthCare}}</text>
         </view>
     </view>
+
+    <view class="loginIcon">
+        <view class="bingLiBen">
+            <image
+                    id="image"
+                    class="loginIconImage"
+                    src="../../materials/healthCare.png"
+                    bindtap="ocr"
+                    background-size="cover"
+                    hidden="{{mainIconShow}}"
+                    mode="scaleToFill">
+
+            </image>
+        </view>
+        <view class="bingLiBenText">
+            <text   bindtap="previewImg" hidden="{{mainIconShow}}">{{healthCare}}</text>
+        </view>
+    </view>
   
 
 
