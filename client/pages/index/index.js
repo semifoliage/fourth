@@ -15,8 +15,11 @@ Page({
         takeSession: false,
         requestResult: '',
         mainIconShow: true,
+        scanReportShow: false,
+        coverbackShow:false,
         list: text.bingLiBen,
-        reportScan: text.baoGaoSaoMiao
+        reportScan: text.baoGaoSaoMiao,
+        healthCare: text.healthCare
     },
     onLoad: function(options){
         //check update version
@@ -348,7 +351,9 @@ function setPageData(that, data){
                 //openId: data.data.openId,
                 //userInfo: data,
                 logged: true,
-                mainIconShow: false
+                mainIconShow: false,
+                scanReportShow: true,
+                coverbackShow:true,
                 });
 
 }
