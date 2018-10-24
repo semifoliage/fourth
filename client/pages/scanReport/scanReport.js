@@ -10,9 +10,18 @@ var text=page.index.data;
 
 
 Page({
+  data: {
+    userInfo: {},
+    openId:'',
+    src:'',
+    imgUrl:''
+  },
+
   onLoad() {
 
   },
+
+  //take a photo
   takePhoto() {
     this.ctx = wx.createCameraContext()
     this.ctx.takePhoto({
@@ -24,6 +33,8 @@ Page({
       }
     })
   },
+
+  //start Record
   startRecord() {
     //chose image
     console.log('chose image to send')
@@ -37,10 +48,33 @@ Page({
         const tempFilePaths = res.tempFilePaths;
         console.log(tempFilePaths)
         that.setData({
-        src: tempFilePaths})
+          src: tempFilePaths
+        })
 
         //send the image to server
-        console.log('send image to backend server');
+        console.log('send image to backend server');         
+        wx.uploadFile({
+          url: config.service.uploadUrl,
+          filePath: tempFilePaths[0],
+          name: 'file',
+
+          success: function(res){
+              util.showSuccess('上传图片成功')
+              console.log(res)
+              res = JSON.parse(res.data)
+              console.log(res)
+              that.setData({
+                  imgUrl: res.data.imgUrl
+              })
+          },
+
+          fail: function(e) {
+              console.log(e);
+              util.showModel('上传图片失败')
+          }
+       })
+
+       /*
         var imageUrl=that.data.src[0]
         wx.request({
                     url: `${config.service.ocrImageUrl}`,
@@ -48,7 +82,7 @@ Page({
                     data: {img:imageUrl},
                     success(result) {},
                     fail(error) {}
-                })
+                })  */
       }
     });
 

@@ -1,9 +1,21 @@
-const { uploader } = require('../qcloud')
+const { uploader } = require('../qcloud');
+var fs=require('fs');
+
+
 
 module.exports = async ctx => {
     // 获取上传之后的结果
     // 具体可以查看：
-    const data = await uploader(ctx.req)
+    const data = await uploader(ctx.req);
+
+    var openId=req.query.openId;
+    var name=req.query.name;
+    var checkDate=req.query.date;
+    var timeStamp=new Date().getTime();
+    var path='img_tmp/'+openId+'_'+timeStamp+'_'+name+'_'+checkDate;
+    
+    var url=req.query.url;
+    var writerStream = fs.createWriteStream(path);
 
     ctx.state.data = data
 }
