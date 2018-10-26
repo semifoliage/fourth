@@ -24,19 +24,27 @@
 
 
     <!-- 上传图片测试 -->
-    <view class="addCgi">
-        <navigator url="../addCgi/addCgi" open-type="navigate" class="uploader-text">
-            <text class="dataTodayButton">Welcome : <text>{{logged ?   userInfo.nickName :'' }}</text> </text>
+    <view class="flex-wrp ">
+        <view class="addCgi">
+            <navigator url="../addCgi/addCgi" open-type="navigate" class="uploader-text">
+                <text class="dataTodayButton">Welcome : <text>{{logged ?   userInfo.nickName :'' }}</text> </text>
 
-        </navigator>
-        <text class="uploader-text ">我的病例本</text>
+            </navigator>
+            
 
 
 
-        <navigator
-                url="../main/main?title=queryUser&user={{userInfo.nickName}}"
-                open-type="navigate"
-                hover-class="navigator-hover"></navigator>
+            <navigator
+                    url="../main/main?title=queryUser&user={{userInfo.nickName}}"
+                    open-type="navigate"
+                    hover-class="navigator-hover"></navigator>
+        </view>
+            <text class="uploader-text ">我的病例本</text>
+        <view>
+        </view>
+        <view class="fontIcon">
+            <icon class="iconfont icon-add-pluss-"></icon>
+        </view>
     </view>
     <view class="loginIcon">
         <view class="bingLiBen">
@@ -63,13 +71,31 @@
                     src="../../materials/medicalReport.png"
                     bindtap="ocr"
                     background-size="cover"
-                    hidden="{{mainIconShow}}"
+                    hidden="{{scanReportShow}}"
                     mode="scaleToFill">
 
             </image>
         </view>
         <view class="bingLiBenText">
-            <text   bindtap="previewImg" hidden="{{mainIconShow}}">{{reportScan}}</text>
+            <text   bindtap="previewImg" hidden="{{scanReportShow}}">{{reportScan}}</text>
+        </view>
+    </view>
+
+    <view class="loginIcon">
+        <view class="bingLiBen">
+            <image
+                    id="image"
+                    class="loginIconImage"
+                    src="../../materials/healthCare.png"
+                    bindtap="ocr"
+                    background-size="cover"
+                    hidden="{{coverbackShow}}"
+                    mode="scaleToFill">
+
+            </image>
+        </view>
+        <view class="bingLiBenText">
+            <text   bindtap="previewImg" hidden="{{coverbackShow}}">{{healthCare}}</text>
         </view>
     </view>
   
