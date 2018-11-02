@@ -23,7 +23,7 @@ var query= function(sqlstring, data, callback){
                 callback(err,null,null);
             }else{
                 //execute query
-                conn.query(sqlstring,data,function(err,results,fields){
+                conn.query(sqlstring,data,function(err,rows){
                     //query call back
                     if (err) {
                         console.log(helper.timeStamp()+'--query in mysql pool error');
@@ -31,8 +31,8 @@ var query= function(sqlstring, data, callback){
                         throw err;
                         };
     
-                     console.log(helper.timeStamp()+'--query in mysql pool success:');
-                 callback(rows);
+                     console.log(helper.timeStamp()+'--query in mysql pool success');                     
+                    callback(rows);
                 });
                 //release pool connection
                 conn.release();
