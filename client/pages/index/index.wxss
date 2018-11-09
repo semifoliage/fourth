@@ -218,3 +218,6 @@ page {
 .navigator-hover {
     color:blue;
 }
+.fontIcon{
+    margin:  10rpx auto;
+}
