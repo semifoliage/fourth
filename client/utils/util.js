@@ -1,5 +1,5 @@
 
-  //format date to string
+  //format date to string   xxxx-xx-xx: hh:min:sec
   const formatTime = date => {
     const year = date.getFullYear()
     const month = date.getMonth() + 1
