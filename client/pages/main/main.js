@@ -69,38 +69,42 @@ Page({
             util.showSuccess('请求成功完成')
             console.log('user initial H data collected ')
             console.log(result)
-            that.setData({
-                title: 'Main Page',
-                openId: result.data[0].openId,
-                nickName: result.data[0].nickName,
-                lastHDate: result.data[0].LastHDate,
-                nextHDate: result.data[0].NextHDate,
-                lastHWeight: result.data[0].lastWeight,
-                onH: result.data[0].onH,
-                beforeHstatus: result.data[0].onH=='N'? false: true ,
-                afterHstatus : result.data[0].onH=='N'? true: false ,
-                service: {
-                  pageTitle:  util.formatAll(util.todayDate())+'s' ,// + day + '/' + monthIndex + '/' + year,
-                  lastHDate: result.data[0].LastHDate,
-                  lastHDateText: text.lastHDateText,
-                  lastHWeight: result.data[0].lastWeight,
-                  lastHWeightText: text.lastHWeightText,
-                  nextHDate: result.data[0].NextHDate,
-                  nextHDateText: text.nextHDateText,
-                  nextHstartText: text.nextHstartText,
-                  nextHstart: result.data[0].onH=="Y"? text.start: text.notStart,
-                  submit: "submit",
-                  inputDataOne: result.data[0].onH=="Y" ? text.inputDataOneUpdate: text.inputDataOneNew,
-                  beforeHstatus: result.data[0].onH == 'Y' ,
-                  inputDataTwo: text.inputDataTwo,
-                  queryData: text.queryData,
-                  listAllData: "list all old data",
-                  onH: result.data[0].onH,
+            if(result.statusCode =='200'){
+                that.setData({
+                    title: 'Main Page',
+                    openId: result.data[0].openId,
+                    nickName: result.data[0].nickName,
+                    lastHDate: result.data[0].LastHDate,
+                    nextHDate: result.data[0].NextHDate,
+                    lastHWeight: result.data[0].lastWeight,
+                    onH: result.data[0].onH,
+                    beforeHstatus: result.data[0].onH=='N'? false: true ,
+                    afterHstatus : result.data[0].onH=='N'? true: false ,
+                    service: {
+                      pageTitle:  util.formatAll(util.todayDate())+'s' ,// + day + '/' + monthIndex + '/' + year,
+                      lastHDate: result.data[0].LastHDate,
+                      lastHDateText: text.lastHDateText,
+                      lastHWeight: result.data[0].lastWeight,
+                      lastHWeightText: text.lastHWeightText,
+                      nextHDate: result.data[0].NextHDate,
+                      nextHDateText: text.nextHDateText,
+                      nextHstartText: text.nextHstartText,
+                      nextHstart: result.data[0].onH=="Y"? text.start: text.notStart,
+                      submit: "submit",
+                      inputDataOne: result.data[0].onH=="Y" ? text.inputDataOneUpdate: text.inputDataOneNew,
+                      beforeHstatus: result.data[0].onH == 'Y' ,
+                      inputDataTwo: text.inputDataTwo,
+                      queryData: text.queryData,
+                      listAllData: "list all old data",
+                      onH: result.data[0].onH,
 
-              }
+                  }
 
 
-            });
+                });
+            } else {
+              util.showModel('请求失败， 请联系管理员', result.data);
+            };
 
           },
           fail(error) {
@@ -111,6 +115,13 @@ Page({
 
   },
 
+  //onShow method
+  onShow: function(options){
+    if(this.data.nextHDate==''){
+      console.log('lalal-show'+options)
+    }
+  },
+
   //start input the data ,
   inputData1stButton: function(){
       //console.log('st:' + weight_todelete);
@@ -119,18 +130,36 @@ Page({
           beforeHstatus: true
 
       })*/
-      //check the nextHDate is existing in tHallData table or not
-      var check=queryExistData(this.data.openId, this.data.nextHDate)
-      console.log(check)
 
+      //collect date to navigate to input data one page 
       var string='?title=Input Data One&weight=' + this.data.lastHWeight
-                  + '&nextHDate=' + this.data.nextHDate
-                  +'&nickName='+this.data.nickName
-                  +'&openId='+this.data.openId
-                  +'&onH='+this.data.onH;
-      wx.navigateTo({
-        url: '../inputDataOne/inputDataOne'+string//?title=Input Data One&weight=' + this.data.lastHWeight + '&nextHDate=' + this.data.nextHDate +'&nickName='+this.data.nickName+'&openId='+this.data.openId,
-      })
+                            + '&nextHDate=' + this.data.nextHDate
+                            +'&nickName='+this.data.nickName
+                            +'&openId='+this.data.openId
+                            +'&onH='+this.data.onH;
+
+      //check the nextHDate is existing in tHallData table or not
+      var that=this;
+      queryExistData(this.data.openId, this.data.nextHDate, that).then(function(check){      
+          if( check =='yes')
+              {
+                
+                util.showModel(text.nextHdateExist, text.inputNewDate)
+                return;
+
+              }else{  
+                //navigate to the input data one page
+                /*var string='?title=Input Data One&weight=' + that.data.lastHWeight
+                            + '&nextHDate=' + this.data.nextHDate
+                            +'&nickName='+this.data.nickName
+                            +'&openId='+this.data.openId
+                            +'&onH='+this.data.onH;  */
+                wx.navigateTo({
+                  url: '../inputDataOne/inputDataOne'+string//?title=Input Data One&weight=' + this.data.lastHWeight + '&nextHDate=' + this.data.nextHDate +'&nickName='+this.data.nickName+'&openId='+this.data.openId,
+                })
+            }
+      }) 
+      
     },
 
     //if the first data is entered , go to next phase
@@ -146,6 +175,7 @@ Page({
         var string='?title=Query History Data'
                       +'&nickName='+this.data.nickName
                       +'&openId='+this.data.openId
+                      +'&userInfo='+ JSON.stringify(this.data.userInfo)
         wx.navigateTo({
           url: '../queryList/queryList'+string//?title=Input Data One&weight=' + this.data.lastHWeight + '&nextHDate=' + this.data.nextHDate +'&nickName='+this.data.nickName+'&openId='+this.data.openId,
         })
@@ -272,7 +302,7 @@ function queryUserInitialData(data, sql){
           success(result) {
             util.showSuccess('请求成功完成')
             console.log('user initial H data collected ')
-            console.log(result)
+            //console.log(result)
             resolve (result);
           },
           fail(error) {
@@ -286,19 +316,21 @@ function queryUserInitialData(data, sql){
 
 };
 
-function queryExistData(user, date){
+ //check userId and selected nextHDate is exist or not 
+ function queryExistData(user, date , that){
   return new Promise((resolve, reject)=>{
     wx.request({
       url: `${config.service.inputSecondDataUrl}`,
       login: false,
       data:{
-        openId: this.data.openId,
-        nextHDate: this.data.nextHDate
+        openId: user,
+        nextHDate: date
       },
       success(result){
-        console.log('nextHdate is checked in database');
-        console.log(result)
-        resolve(result)
+        console.log('nextHdate is checked in database');         
+        var res=verifyQuery(result.data);  
+        //console.log(res)       
+        resolve(res)
       },
       fail(error){
         util.showModel('请求失败', error);
@@ -308,4 +340,15 @@ function queryExistData(user, date){
     })
   })
 
+};
+
+//verify the query data is empty array or not 
+function verifyQuery(data){
+  if(data.length==0){
+    //if data do not exist return false
+    return 'no';
+  }else {
+    //if data exist return true
+    return 'yes';
+  }
 }
