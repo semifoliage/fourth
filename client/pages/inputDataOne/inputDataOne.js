@@ -32,6 +32,7 @@ Page({
     saveStatus: true,
     summary:'',
     service: {
+      todayTitle: 'today time',
       pageTitle: 'Hello World really?',
       systemDate: '',
       userAccount: 'lala',
@@ -99,7 +100,8 @@ Page({
               saveStatus: options.onH == 'N' ? false : true,
               summary: pageText.summary,
               service: {
-                pageTitle: 'Today : ' + options.nextHDate,//util.formatAll(util.todayDate()),
+                todayTitle: 'Today : '+ util.formatTime(util.todayDate()),
+                pageTitle: pageText.pageDate +': ' + options.nextHDate,//util.formatAll(util.todayDate()),
                 systemDate: util.formatAll(util.todayDate()),
                 userAccount: 'lala',
                 inputValue: '',
@@ -179,7 +181,24 @@ Page({
           nextStatus: false,
           save: 'Update',
           saveStatus: true
-        })
+        });
+
+        //navigate to inputoneshow page after input the inputDataOne
+        console.log('navigate to inputOneShow')
+        util.showSuccess('上机数据输入成功完成')
+        var string= '&weightToH='+that.data.weightToHNum
+                    +'&hDate='+that.data.hDate
+                    +'&nickName='+that.data.nickName
+                    +'&openId='+that.data.openId
+                    +'&weightBeforeH='+that.data.beforeWeightNum
+                    +'&lastWeight='+ that.data.weight_lasttimeNum
+                    +'&highPressureBefore=' +that.data.bloodHighNum
+                    +'&lowPressureBefore='+ that.data.bloodLowNum
+                    +'&heartBeatRateB='+ that.data.heartBitNum
+                    +'&hospitalName='+ '';
+        wx.navigateTo({
+              url: '../inputDataOneShow/inputDataOneShow?title=Input Data Two'+string,
+          });
       },
       fail(error) {
         util.showModel('请求失败', error);
