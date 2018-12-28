@@ -32,7 +32,7 @@ var query= function(sqlstring, data, callback){
                     throw err;
                     };
 
-                 console.log('Last record insert id:');
+                 console.log(helper.timeStamp()+'--Last record insert id:');
              callback(rows);
         });
 
@@ -41,9 +41,20 @@ var query= function(sqlstring, data, callback){
             if(err){
                 return;
             }else{
-                console.log('mysql onnection is closed !');
+                console.log(helper.timeStamp()+'--mysql onnection is closed !');
             }
         });
+
+        //connection on error 
+        connection.on('error', function(err) {
+            console.log(helper.timeStamp()+'--db error', err);
+            if(err.code === 'PROTOCOL_CONNECTION_LOST') { // Connection to the MySQL server is usually
+              //handleDisconnect(); 
+              throw err;                        // lost due to either server restart, or a
+            } else {                                      // connnection idle timeout (the wait_timeout
+              throw err;                                  // server variable configures this)
+            }
+          });
 
 };
 

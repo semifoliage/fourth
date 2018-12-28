@@ -15,8 +15,11 @@ Page({
         takeSession: false,
         requestResult: '',
         mainIconShow: true,
+        scanReportShow: false,
+        coverbackShow:false,
         list: text.bingLiBen,
-        reportScan: text.baoGaoSaoMiao
+        reportScan: text.baoGaoSaoMiao,
+        healthCare: text.healthCare
     },
     onLoad: function(options){
         //check update version
@@ -36,12 +39,12 @@ Page({
               success: function (res) {
                 console.log(res);
                 that.setData({
-                    openId: res.data.data.openId,
+                    openId: res.data.openId,
                     userInfo: res.data,
                     logged: true
                     });
                 app._userInfo=res.data;
-                app.openId=res.data.data.openId;
+                app.openId=res.data.openId;
                 console.log('storage get done, the user info collected')
 
                 //set MainIcon show
@@ -208,7 +211,7 @@ Page({
         var string='&openId='+this.data.openId
                     +'&nickName='+ this.data.userInfo.nickName
                     +'&userInfo='+ JSON.stringify(this.data.userInfo)
-                    +'&codeName='+this.data.userInfo.data.codeName;
+                    //+'&codeName='+this.data.userInfo.data.codeName;   //to be added in the future 
         wx.navigateTo({
                   url: '../main/main?title=Main Page'+string,
               })
@@ -348,7 +351,9 @@ function setPageData(that, data){
                 //openId: data.data.openId,
                 //userInfo: data,
                 logged: true,
-                mainIconShow: false
+                mainIconShow: false,
+                scanReportShow: false,
+                coverbackShow:true,
                 });
 
 }

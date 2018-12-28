@@ -28,6 +28,7 @@
      hDurationNum:'',
      overHWarning:'',
      service: {
+       todayTitle: 'today time',
        pageTitle: 'Hello World really?',
        weight_toH: 'Weight to H',
        afterWeight: 'Weight After H',
@@ -78,7 +79,8 @@
        hDurationNum: '4',
        overHWarning:false,
        service: {
-         pageTitle: 'Today is ' + util.formatAll(new Date()),
+         todayTitle: 'Today : '+ util.formatTime(util.todayDate()),
+         pageTitle: pageText.pageDate+': ' + options.hDate,//util.formatAll(new Date()),
          weight_toH: pageText.weight_toH,
          afterWeight: pageText.afterWeight,
          weightH:pageText.weightH,
