@@ -1,4 +1,6 @@
  
+https://cloud.tencent.com/document/product/436/12264
+https://cloud.tencent.com/developer/article/1004361
 
 **登录接口切换公告：https://github.com/tencentyun/wafer2-quickstart/issues/10**
 
