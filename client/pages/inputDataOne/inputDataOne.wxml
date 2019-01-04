@@ -1,6 +1,7 @@
 <!--pages/inputDataOne/inputDataOne.wxml-->
 
 <view style="text-align:center"> {{title}} </view>
+<view class="section">{{service.todayTitle}}</view>
 <view class="section">{{service.pageTitle}}
 <form>
     <view class="flex-wrp" style="flex-direction:row">

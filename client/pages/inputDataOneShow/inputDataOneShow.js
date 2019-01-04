@@ -128,6 +128,7 @@ Page({
   },
 
   backToInputOne: function(e){
+    /*
     var string='&openId='+this.data.openId
                +'&nextHDate='+this.data.hDate
                +'&nickName='+this.data.nickName
@@ -136,6 +137,17 @@ Page({
      wx.navigateTo({
           url: '../inputDataOne/inputDataOne?title=Input Data One'+string,
         });
+        */
+    //navitate to mainpage
+    console.log('navigate to mainpage')
+    var string='&openId='+this.data.openId
+                +'&nickName='+ this.data.userInfo.nickName
+                +'&userInfo='+ JSON.stringify(this.data.userInfo)
+                //+'&codeName='+this.data.userInfo.data.codeName;   //to be added in the future 
+    wx.navigateTo({
+              url: '../main/main?title=Main Page'+string,
+          })
+    
   },
 
   goToInputTwo: function(e){
